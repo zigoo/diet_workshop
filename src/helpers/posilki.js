@@ -2,7 +2,7 @@
 
 const posilki = [
  {
- 	id:1,
+ 	id:0,
  	typ: 1,
  	dzien: 1,
  	nazwa: 'Jaglanka z pistacjami i malinami',
@@ -10,7 +10,7 @@ const posilki = [
  	hint: 'Tutaj spokojnie można wykorzystać orzechy nerkowca, migdały, albo orzech brazylijski zamiast pistacji.'
  },
  {
- 	id:2,
+ 	id:1,
  	typ: 2,
  	dzien: 1,
  	nazwa: 'Kanapki z awokado i jajkiem',
@@ -18,7 +18,7 @@ const posilki = [
  	hint: 'Można kaszę jaglaną zamienić na płatki owsiane. '
  },
  {
- 	id:3,
+ 	id:2,
  	typ: 3,
  	dzien: 1,
  	nazwa:'Makaron z pesto i orzechami' ,
@@ -26,7 +26,7 @@ const posilki = [
  	hint: 'Można zrobić oczywiście pesto samodzielnie, ale to trochę trwa, są dostępne pesto bez dodatku konserwantów, ważne żeby skład był jak najkrótszy.'
  },
  {
- 	id:4,
+ 	id:3,
  	typ: 4,
  	dzien: 1,
  	nazwa: 'Wołowina',
@@ -34,7 +34,7 @@ const posilki = [
  	hint: ' Jak podwoisz liczbę składników będzie od razu ugotowane na następny dzień'
  },
  {
- 	id: 5,
+ 	id: 4,
  	typ: 1,
  	dzien: 2,
  	nazwa: 'Szakszuka',
@@ -42,7 +42,7 @@ const posilki = [
  	hint: 'To jest świetne rozwiązanie na śniadanie na ciepło.'
  },
  {
- 	id: 6,
+ 	id: 5,
  	typ: 2,
  	dzien: 2,
  	nazwa: 'Owsianka z gruszką i imbirem.',
@@ -50,7 +50,7 @@ const posilki = [
  	hint: ' Imbir świeży możemy zastąpić imbirem sproszkowanym, jeśli wolisz inny owoc, spokojnie możesz wymienić. Imbir poprawia trawienie i przyśpiesza metabolizm.'
  },
  {
- 	id: 7,
+ 	id: 6,
  	typ: 3,
  	dzien: 2,
  	nazwa: 'Indyk pieczony ze szpinakiem' ,
@@ -58,7 +58,7 @@ const posilki = [
  	hint: ''
  },
  {
- 	id: 8,
+ 	id: 7,
  	typ: 4,
  	dzien: 2,
  	nazwa: 'Sałatka z ciecierzycą ',
