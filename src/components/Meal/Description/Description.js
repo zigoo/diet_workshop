@@ -14,7 +14,6 @@ class MealDescription extends Component {
 }
 
 const mapStateToProps= (state)  => {
-  var sel = state.selected;
   return {
     meal: state.meals.find(meal => meal.id === state.selected)
   }
