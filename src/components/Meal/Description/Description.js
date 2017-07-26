@@ -13,7 +13,7 @@ class MealDescription extends Component {
   }
 }
 
-const mapStateToProps= (state)  => {
+function mapStateToProps(state){
   return {
     meal: state.meals.find(meal => meal.id === state.selected)
   }
