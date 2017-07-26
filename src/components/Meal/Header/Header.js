@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import PosilekBtn from './Button/Posilek_btn';
-import { ButtonToolbar } from 'react-bootstrap';
-import * as actions from './actions';
+import MealBtn from './Button/Meal_btn';
 import setSelected from './actions'
+import { ButtonToolbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import './style.css';
 
-class PosilekHeader extends Component {
+class MealHeader extends Component {
   constructor(){
    super()
    this.handleClick = this.handleClick.bind(this);
@@ -18,15 +17,15 @@ class PosilekHeader extends Component {
   }
   render() {
     return (
-      <div className="PosilekHeader">
+      <div className="MealHeader">
         Jadlospis na dzisiaj <br />
         Wybierz posilek <br />
          <ButtonToolbar>
            {/* use hoc */}
-           <PosilekBtn typ={1} onClick={this.handleClick} />
-           <PosilekBtn typ={2} onClick={this.handleClick}/>
-           <PosilekBtn typ={3} onClick={this.handleClick}/>
-           <PosilekBtn typ={4} onClick={this.handleClick}/>
+           <MealBtn type={1} onClick={this.handleClick} />
+           <MealBtn type={2} onClick={this.handleClick}/>
+           <MealBtn type={3} onClick={this.handleClick}/>
+           <MealBtn type={4} onClick={this.handleClick}/>
          </ButtonToolbar>
       </div>
     );
@@ -35,7 +34,7 @@ class PosilekHeader extends Component {
 
 function mapStateToProps(state) {
   return {
-  	selected: state.posilki.selected
+  	selected: state.meals.selected 
   }
 }
-export default connect(mapStateToProps)(PosilekHeader);
+export default connect(mapStateToProps)(MealHeader);

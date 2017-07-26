@@ -3,8 +3,8 @@ import { Button } from 'react-bootstrap';
 import './style.css';
 
 
-class PosilekBtn extends Component {
-  handleClick = () => this.props.onClick(this.props.typ)
+class MealBtn extends Component {
+  handleClick = () => this.props.onClick(this.props.type)
  
   render() {
    const typ = { 1: 'sniadanie' , 
@@ -15,11 +15,11 @@ class PosilekBtn extends Component {
     return (
       <Button bsStyle="primary cst-wdth" bsSize="xsmall" 
               onClick={this.handleClick}>
-                {typ[this.props.typ]}
+                {typ[this.props.type]}
       </Button>
     );
   }
 }
 
 
-export default PosilekBtn;
+export default MealBtn;

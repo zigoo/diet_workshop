@@ -6,12 +6,12 @@ import { Provider }					    from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import { Router, Route, browserHistory } from 'react-router'
  
-import posilek from './ridax/posilek.js'; 
+import meal from './ridax/meal.js'; 
  
 import App from './components/App.js';
  
 export const store = createStore( 
-	posilek,
+	meal,
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
 );
 

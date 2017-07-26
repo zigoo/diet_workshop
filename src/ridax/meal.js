@@ -1,10 +1,10 @@
 /* eslint-disable */
-import posilki from '../helpers/posilki.js';
+import meals from '../helpers/meals.js';
 
 const SELECTED = 'SELECTED';
 
 const initialState = {
-  posilki,
+  meals,
   selected:0
 };
 
@@ -12,7 +12,6 @@ const initialState = {
 export default function posilek (state = initialState , action ) {
   switch (action.type) {
     case SELECTED:
-    console.log(action.typ)
      return {
        ...state,
        selected: action.typ
