@@ -7,13 +7,14 @@ class MealBtn extends Component {
   handleClick = () => this.props.onClick(this.props.type)
  
   render() {
-   const typ = { 1: 'sniadanie' , 
-   				 2: 'drugie sniadanie',
-   				 3: 'obiad',
-   				 4: 'drugi obiad'
-   		       }
+   const typ = { 
+                  1: 'sniadanie' , 
+   				        2: 'drugie sniadanie',
+   				        3: 'obiad',
+   				        4: 'drugi obiad'
+   		         }
     return (
-      <Button bsStyle="primary cst-wdth" bsSize="xsmall" 
+      <Button bsStyle="default cst-wdth" bsSize="large" 
               onClick={this.handleClick}>
                 {typ[this.props.type]}
       </Button>

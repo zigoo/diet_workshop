@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import MealBtn from './Button/Meal_btn';
-import setSelected from './actions'
+
 import { ButtonToolbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import MealBtn from './Button/Meal_btn';
+import setSelected from './actions'
 import './style.css';
 
 class MealHeader extends Component {
@@ -15,18 +16,15 @@ class MealHeader extends Component {
   	const { dispatch } = this.props;
   	dispatch(setSelected(typ));
   }
+
   render() {
+    const btns_len = [{ key:1, type:1 }, { key:2, type:2 }, { key:3, type:3 }, { key:4, type:4 }]
     return (
-      <div className="MealHeader">
-        Jadlospis na dzisiaj <br />
-        Wybierz posilek <br />
-         <ButtonToolbar>
-           {/* use hoc */}
-           <MealBtn type={1} onClick={this.handleClick} />
-           <MealBtn type={2} onClick={this.handleClick}/>
-           <MealBtn type={3} onClick={this.handleClick}/>
-           <MealBtn type={4} onClick={this.handleClick}/>
-         </ButtonToolbar>
+      <div className="MealHeader">  
+        {/* use hoc */}
+        <ButtonToolbar>
+          {btns_len.map(btn => <MealBtn type={btn.type} onClick={this.handleClick} key={btn.key} /> )}
+        </ButtonToolbar>
       </div>
     );
   }
@@ -34,7 +32,7 @@ class MealHeader extends Component {
 
 function mapStateToProps(state) {
   return {
-  	selected: state.meals.selected 
+    selected: state.meals.selected 
   }
 }
 export default connect(mapStateToProps)(MealHeader);

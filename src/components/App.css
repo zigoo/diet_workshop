@@ -1,4 +1,10 @@
-.App {
-  text-align: center;
+
+* {
+	margin: 0;
+ }
+
+.meal_header-margin {
+	margin-top: 5%;
 }
+
  

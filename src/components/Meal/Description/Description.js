@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Grid, Row, Col } from 'react-bootstrap';
 import './style.css';
 
 class MealDescription extends Component {
   render() {
-    const  {desc, name} = this.props.meal;  
+    const  {desc, name, hint} = this.props.meal;  
     return (
-      <div className="MealDescription">
-       {desc}
+      <div>
+            <div className="MealDescription">
+               {/* add r-bootstrap tooltips */}
+             <h3>{name}</h3> <br />
+             {desc} <br />
+             {hint.length && hint && hint}
+            </div>
+ 
       </div>
     );
   }

@@ -1,0 +1,38 @@
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.rdtPicker table {
+    width: 100%;
+    margin: 0;
+}
+.rdtPicker td.rdtOld, .rdtPicker td.rdtNew {
+	color: gray;
+}
+
+.rdtPicker td.rdtActive, .rdtPicker td.rdtActive:hover {
+	background-color: #428bca;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.rdtPicker td, .rdtPicker th {
+	height: 28px;
+	text-align: center;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.calendar_whole {
+ 	 font-family:  "Lucida Grande", sans-serif;
+     font-size: 18px;  
+     cursor: pointer;
+     text-align: center;
+}
