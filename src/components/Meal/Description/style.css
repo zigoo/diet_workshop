@@ -11,3 +11,11 @@ h3 {
  margin:0;
  color: #096af0;
 }
+
+p {
+    font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    color: gray;
+    margin-bottom: 10px;
+}

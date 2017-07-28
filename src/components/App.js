@@ -17,11 +17,11 @@ class App extends Component {
             <MealHeader />
           </Col>
          </div>
-          <Col md={4} > 
+          <Col md={5} > 
             <MealDescripton />   
           </Col>
-           <Col xsOffset={2}  md={3} >
-            <Calendar /> 
+           <Col xsOffset={1}  md={3} >
+            <Calendar  /> 
           </Col>
         </Row>
       </Grid>

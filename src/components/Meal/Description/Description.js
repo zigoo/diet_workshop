@@ -11,8 +11,10 @@ class MealDescription extends Component {
             <div className="MealDescription">
                {/* add r-bootstrap tooltips */}
              <h3>{name}</h3> <br />
-             {desc} <br />
-             {hint.length && hint && hint}
+               {desc} <br />
+             <p>
+               {hint}
+             </p>
             </div>
  
       </div>

@@ -1,35 +1,54 @@
 import React, { Component } from 'react';
-import  Datetime  from 'react-datetime';
+import DayPicker from 'react-day-picker';
+import { connect } from 'react-redux';
+import 'react-day-picker/lib/style.css';
 import './style.css';
 
-class Calendar extends Component {
-  render() {
-    var date = new Date();
-    let helpers  = [{
-  	  	  renderDay( props, currentDate, selectedDate ) {
-            return <td {...props}>{ '0' + currentDate.date() }</td>;
-      	  },
-  	 	  renderMonth( props, month, year, selectedDate){
-    	    return <td {...props}>{ month }</td>;
-  		  },
-  		  renderYear( props, year, selectedDate ){
-    		return <td {...props}>{ year % 100 }</td>;
-  		  }
-	}];
+import { sendDateToStore } from './actions.js';
 
-   return(
-   	 <div className="calendar_whole">	
-  	   <Datetime 
-  	     defaultValue={date}              
-  	     timeFormat={false}
-  	     className='calendar'    
-  	     input={false}         
-  	     renderDay={ helpers.renderDay } 
-  	     renderMonth={ helpers.renderMonth } 
-  	     renderYear={ helpers.renderYear } />
-   	 </div>
+class Calendar extends Component {
+  constructor() {
+    super()
+      this.state = {
+       selectedDay: new Date(),
+      };
+  }
+
+  handleDayClick(day, { selected }) {
+  	const { dispatch } = this.props;
+
+    this.setState({
+      selectedDay: selected ? undefined : day,
+    });
+  
+    dispatch(sendDateToStore(day.toLocaleDateString()));
+  };
+
+  render() {
+    const { selectedDay } = this.props;
+    return(
+      <div className="calendar_whole">	
+  	    <DayPicker 
+  	      selectedDays={selectedDay}
+          onDayClick={ this.handleDayClick.bind(this)}
+  	      todayButton="dzisiaj" 
+        />
+  	    <p>
+         {  selectedDay 
+          ? selectedDay
+          : 'wybierz date'
+         }
+        </p>
+   	   </div> 
    )
   }
 }
 
-export default Calendar;
+function mapStateToProps(state){
+  return {
+    selectedDay: state.selectedDate 
+  }
+}
+
+export default connect(mapStateToProps)(Calendar);
+ 
