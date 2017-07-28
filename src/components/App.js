@@ -10,21 +10,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Grid>
-        <Row className="show-grid">
-         <div className="meal_header-margin">
-          <Col md={3} >
-            <MealChoice />
-          </Col>
-         </div>
-          <Col md={5} > 
-            <MealDescripton />   
-          </Col>
-           <Col xsOffset={1}  md={3} >
-            <Calendar  /> 
-          </Col>
-        </Row>
-      </Grid>
+        <Grid>
+          <Row className="show-grid">
+            <div className="meal_header-margin">
+            <Col md={3} >
+              <MealChoice />
+            </Col>
+            </div>
+            <Col md={5} > 
+              <MealDescripton />   
+            </Col>
+            <Col xsOffset={1}  md={3} >
+              <Calendar  /> 
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
