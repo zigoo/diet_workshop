@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
 import { ButtonToolbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import MealBtn from './Button/Meal_btn';
-import setSelected from './actions'
+import MealBtn from './Button/Button';
+import setSelected from './actions';
 import './style.css';
 
 class MealHeader extends Component {
