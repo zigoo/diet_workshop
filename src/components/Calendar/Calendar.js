@@ -7,24 +7,14 @@ import './style.css';
 import { sendDateToStore } from './actions.js';
 
 class Calendar extends Component {
-  constructor() {
-    super()
-      this.state = {
-       selectedDay: new Date(),
-      };
-  }
-
   handleDayClick(day, { selected }) {
   	const { dispatch } = this.props;
-
-    this.setState({
-      selectedDay: selected ? undefined : day,
-    });
-  
+ 
     dispatch(sendDateToStore(day.toLocaleDateString()));
   };
 
   render() {
+    //fix invalid proptypes in DayPicker->selectedDay
     const { selectedDay } = this.props;
     return(
       <div className="calendar_whole">	
@@ -34,7 +24,7 @@ class Calendar extends Component {
   	      todayButton="dzisiaj" 
         />
   	    <p>
-         {  selectedDay 
+         {  selectedDay
           ? selectedDay
           : 'wybierz date'
          }
