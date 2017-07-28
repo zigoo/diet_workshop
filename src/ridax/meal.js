@@ -6,7 +6,7 @@ const SELECTED_DATE = 'SELECTED_DATE';
 
 const initialState = {
   meals,
-  selected:0,
+  selectedMeal:0,
   selectedDate: null
 };
 
@@ -16,7 +16,7 @@ export default function meal_reducer (state = initialState , action ) {
     case SELECTED:
       return {
         ...state,
-        selected: action.typ
+        selectedMeal: action.typ
       }
     case SELECTED_DATE:
       return {

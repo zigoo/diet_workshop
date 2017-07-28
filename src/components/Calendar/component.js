@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import DayPicker from 'react-day-picker';
-import { connect } from 'react-redux';
+import { sendDateToStore } from './actions.js';
 import 'react-day-picker/lib/style.css';
 import './style.css';
 
-import { sendDateToStore } from './actions.js';
 
 class Calendar extends Component {
   handleDayClick(day, { selected }) {
@@ -33,12 +32,4 @@ class Calendar extends Component {
    )
   }
 }
-
-function mapStateToProps(state){
-  return {
-    selectedDay: state.selectedDate 
-  }
-}
-
-export default connect(mapStateToProps)(Calendar);
- 
+export default Calendar;

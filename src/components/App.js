@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MealChoice from './Meal/MealChoice/MealChoice.js';
-import MealDescripton from './Meal/Description/Description.js';
-import Calendar from './Calendar/Calendar.js'
+import MealChoice from './Meal/MealChoice/container.js';
+import MealDescripton from './Meal/Description/container.js';
+import Calendar from './Calendar/container.js'
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import './App.css';

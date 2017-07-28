@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { ButtonToolbar } from 'react-bootstrap';
-import { connect } from 'react-redux';
 import MealBtn from './Button/Button';
 import setSelected from './actions';
 import './style.css';
 
-class MealHeader extends Component {
+class MealChoice extends Component {
   constructor(){
    super()
    this.handleClick = this.handleClick.bind(this);
@@ -19,7 +18,7 @@ class MealHeader extends Component {
   render() {
     const btns_len = [{ key:1, type:1 }, { key:2, type:2 }, { key:3, type:3 }, { key:4, type:4 }]
     return (
-      <div className="MealHeader">  
+      <div className="MealChoice">  
         {/* use hoc */}
         <ButtonToolbar>
           {btns_len.map(btn => <MealBtn type={btn.type} onClick={this.handleClick} key={btn.key} /> )}
@@ -29,9 +28,4 @@ class MealHeader extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    selected: state.meals.selected 
-  }
-}
-export default connect(mapStateToProps)(MealHeader);
+export default MealChoice;
