@@ -1,5 +1,6 @@
 .cst-wdth {
-	width: 90%;
+	width: 100%;
+	min-width: 100px;
 }
  
  

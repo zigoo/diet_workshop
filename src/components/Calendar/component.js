@@ -1,31 +1,34 @@
 import React, { Component } from 'react';
 import DayPicker from 'react-day-picker';
-import { sendDateToStore } from './actions.js';
 import 'react-day-picker/lib/style.css';
-import './style.css';
 
+import 'moment/locale/pl';
+import LocaleUtils from 'react-day-picker/moment';
+import './style.css';
 
 class Calendar extends Component {
   handleDayClick(day, { selected }) {
-  	const { dispatch } = this.props;
- 
-    dispatch(sendDateToStore(day.toLocaleDateString()));
+  	const { sendDateToStore } = this.props;
+    try {
+      sendDateToStore(day.toLocaleDateString());
+    }
+    catch (err) {
+      console.log('error:',err)
+    } 
   };
 
   render() {
     //fix invalid proptypes in DayPicker->selectedDay
     const { selectedDay } = this.props;
+    const months = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień'];
     return(
       <div className="calendar_whole">	
-  	    <DayPicker 
-  	      selectedDays={selectedDay}
-          onDayClick={ this.handleDayClick.bind(this)}
-  	      todayButton="dzisiaj" 
-        />
+  	    <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
+                        localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
   	    <p>
-         {  selectedDay
-          ? selectedDay
-          : 'wybierz date'
+         {selectedDay
+           ? selectedDay
+           : 'wybierz date'
          }
         </p>
    	   </div> 
@@ -33,3 +36,4 @@ class Calendar extends Component {
   }
 }
 export default Calendar;
+

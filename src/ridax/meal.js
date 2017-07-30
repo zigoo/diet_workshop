@@ -6,7 +6,7 @@ const SELECTED_DATE = 'SELECTED_DATE';
 
 const initialState = {
   meals,
-  selectedMeal:0,
+  selectedMeal:1,
   selectedDate: null
 };
 

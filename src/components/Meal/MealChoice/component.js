@@ -21,7 +21,7 @@ class MealChoice extends Component {
       <div className="MealChoice">  
         {/* use hoc */}
         <ButtonToolbar>
-          {btns_len.map(btn => <MealBtn type={btn.type} onClick={this.handleClick} key={btn.key} /> )}
+          {btns_len.map(btn => <MealBtn {...{type: btn.type, onClick: this.handleClick, key: btn.key} } /> )}
         </ButtonToolbar>
       </div>
     );

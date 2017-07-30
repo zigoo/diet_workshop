@@ -7,7 +7,7 @@ const meals = [
  	day: 1,
  	name: 'Jaglanka z pistacjami i malinami',
  	desc: '½ opakowania malin, 3 łyżki kaszy jaglanej, 2 łyżki pistacji. Kaszę ugotuj na miękko na wodzie według instrukcji na opakowaniu. Wyłóż do miski, dodaj pistacje i maliny.',
- 	hint: 'Tutaj spokojnie można wykorzystać orzechy nerkowca, migdały, albo orzech brazylijski zamiast pistacji.'
+ 	hint: 'Tutaj spokojnie można wykorzystać orzechy nerkowca, migdały, albo orzech brazylijski zamiast pistacji.Można kaszę jaglaną zamienić na płatki owsiane.'
  },
  {
  	id:1,
@@ -15,7 +15,7 @@ const meals = [
  	day: 1,
  	name: 'Kanapki z awokado i jajkiem',
  	desc: '2 kromki chleba pełnoziarnistego, 1 jajo, Pół awokado, 3 łyżeczki pietruszki, 1 ząbek czosnku, sól pieprz. Awokado rozgnieźć widelcem i połączyć z pietruszką i zgnieczonym czosnkiem, doprawić solą i pieprzem. Jajko ugotować oddzielnie. Podawać w formie kanapek z pastą awokado i ugotownym jajkiem. ',
- 	hint: 'Można kaszę jaglaną zamienić na płatki owsiane. '
+ 	hint: ''
  },
  {
  	id:2,
