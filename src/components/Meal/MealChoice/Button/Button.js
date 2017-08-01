@@ -12,7 +12,7 @@ class MealBtn extends Component {
                   1: 'sniadanie' , 
    				        2: 'drugie sniadanie',
    				        3: 'obiad',
-   				        4: 'drugi obiad'
+   				        4: 'kolacja'
    		         }
     return (
       <Button bsStyle="default cst-wdth" bsSize="large" 

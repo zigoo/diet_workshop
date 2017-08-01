@@ -4,7 +4,7 @@ import './style.css';
 class MealDescription extends Component {
   render() {
     const {desc, name, hint } = this.props.meal !== undefined ? this.props.meal : '';
-
+    const mealsQuantity = this.props.meals.length;
     return (
       <div>
         <div className="MealDescription">
@@ -14,6 +14,7 @@ class MealDescription extends Component {
           <p>
               {hint}
           </p>
+          Ilość przepisów: {mealsQuantity}
         </div>
       </div>
     );
