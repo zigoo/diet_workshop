@@ -1,7 +1,6 @@
 import MealDescription from './component.js';
 import { connect } from 'react-redux';
 
-/*
 function mapStateToProps(state){
   const mealReducer = state.meal;
   const day = mealReducer.selectedDate !== null 
@@ -13,10 +12,11 @@ function mapStateToProps(state){
     dateSelected: state.meal.selectedDate,
   }
 }
-*/
 
+
+/*
 function mapStateToProps(state){
- // console.log(state.meals)
+ console.log(state)
   try {
 
   const day = state.selectedDate !== null 
@@ -32,5 +32,7 @@ function mapStateToProps(state){
  	console.log(err)
  }
 }
+*/
+
 
 export default connect(mapStateToProps)(MealDescription);

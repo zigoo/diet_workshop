@@ -4,7 +4,7 @@ import { sendDateToStore } from './actions.js';
 
 function mapStateToProps(state){
   return {
-    selectedDay: state.selectedDate 
+    selectedDay: state.meal.selectedDate 
   }
 }
 

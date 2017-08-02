@@ -14,7 +14,7 @@ class MealDescription extends Component {
           <p>
               {hint}
           </p>
-          Ilość przepisów: {mealsQuantity}
+         Ilość przepisów: {mealsQuantity}
         </div>
       </div>
     );
