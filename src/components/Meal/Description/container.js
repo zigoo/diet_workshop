@@ -8,7 +8,6 @@ function mapStateToProps(state){
 
   return {
     meal: state.meal.meals.find(meal => ( (meal.type === mealReducer.selectedMeal) && (meal.day === day)) ),
-    meals: state.meal.meals,
     dateSelected: state.meal.selectedDate,
   }
 }

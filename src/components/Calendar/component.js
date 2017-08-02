@@ -18,9 +18,11 @@ class Calendar extends Component {
   };
 
   render() {
-    //fix invalid proptypes in DayPicker->selectedDay
     const { selectedDay } = this.props;
-    const months = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień'];
+    const months = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec',
+                    'sierpień','wrzesień','październik','listopad','grudzień'];
+    const mealsQuantity = this.props.meals.length;
+
     return(
       <div className="calendar_whole">	
   	    <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
@@ -29,7 +31,8 @@ class Calendar extends Component {
          {selectedDay
            ? selectedDay
            : 'wybierz date'
-         }
+         } <br/>
+         Ilość przepisów: {mealsQuantity}
         </p>
    	   </div> 
    )

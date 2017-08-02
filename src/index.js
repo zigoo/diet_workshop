@@ -38,7 +38,7 @@ ReactDOM.render(
      <Router history={history}>
       <Route path="/" component={App} />
        <Route path="/sniadanie" component={App}/>
-        <Route path="/drugie sniadanie" component={App}/>
+        <Route path="/drugieSniadanie" component={App}/>
          <Route path="/obiad" component={App}/>
           <Route path="/kolacja" component={App}/>
      </Router>

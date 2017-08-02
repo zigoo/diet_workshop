@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MealChoice from './Meal/MealChoice/container.js';
 import MealDescripton from './Meal/Description/container.js';
 import Calendar from './Calendar/container.js'
+import Utils from './Utils/component.js'
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import './App.css';
@@ -17,13 +18,18 @@ class App extends Component {
               <MealChoice />
             </Col>
             </div>
-            <Col md={5} > 
+            <Col md={6} > 
               <MealDescripton />   
             </Col>
-            <Col xsOffset={1}  md={3} >
+            <Col md={3} >
               <Calendar  /> 
             </Col>
           </Row>
+           <Row>
+             <Col md={12}>
+               <Utils />
+             </Col>
+           </Row>
         </Grid>
       </div>
     );
