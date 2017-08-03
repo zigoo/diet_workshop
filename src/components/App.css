@@ -1,8 +1,7 @@
-
-* {
-	margin: 0;
- }
-
+.container {
+  margin: 0 ;
+}
+ 
 .meal_header-margin {
 	margin-top: 5%;
 }
