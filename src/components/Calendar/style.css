@@ -5,10 +5,14 @@ table {
     border-color: grey;
 }
 
-.calendar_whole {
+.Calendarr {
   font-family:  "Lucida Grande", sans-serif;
   font-size: 16px;  
   cursor: pointer;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 1px;
+}
+
+.Row {
+	margin: 0;
 }

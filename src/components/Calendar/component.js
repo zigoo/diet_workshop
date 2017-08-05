@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DayPicker from 'react-day-picker';
 import LocaleUtils from 'react-day-picker/moment';
+import Collapsible from '../Utils/Collapsible/Collapsible.js'
 
 import 'moment/locale/pl';
 import 'react-day-picker/lib/style.css';
@@ -26,7 +27,8 @@ class Calendar extends Component {
                     'sierpień','wrzesień','październik','listopad','grudzień'];
                     
     return(
-      <div className="calendar_whole">	
+      <div className="Calendarr">	
+        <Collapsible title='Kalendarz'>
   	    <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
                         localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
   	    <p>
@@ -36,6 +38,7 @@ class Calendar extends Component {
          } <br/>
          Ilość przepisów: {mealsQuantity}
         </p>
+        </Collapsible>
    	  </div> 
    )
   }

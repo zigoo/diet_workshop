@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js'
-
 import Collapsible from '../Collapsible/Collapsible.js'
 import './style.css';
   
 
-class Utils extends Component {
+class Search extends Component {
   constructor(){
   	super()
     this.state = {value: '', meals:meals, items:[]}
@@ -27,7 +26,7 @@ class Utils extends Component {
   render() {
      
     return (
-      <div className="Utils">
+      <div className="Search">
         <Collapsible title='Szukaj'>       
         <div className="Utils_find-box">
           <Row>           
@@ -49,4 +48,4 @@ class Utils extends Component {
   }
 }
  
-export default Utils;
+export default Search;

@@ -22,17 +22,15 @@ export class Collapsible extends Component {
 		const {children, title} = this.props;
 		const {isExpanded} = this.state;
 		return (
-		  <div>
-		 
+		  <div className="Collapsible">
 		    <Button 
               bsStyle="default cst-wdth" bsSize="large" 
               onClick={(e) => this.handleClick(e)}>
                 {title} 
-            </Button>	
-            
+            </Button>	        
  		    <Collapse in={isExpanded}>
             <div>
-              <Well bsClass='well well-custom' >
+              <Well bsClass='well well-custom'>
                 {children}
               </Well>
             </div>
