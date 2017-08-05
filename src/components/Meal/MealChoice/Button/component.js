@@ -14,11 +14,12 @@ class MealBtn extends Component {
     browserHistory.push('/'+path)
   }
   
-  render() { 
+  render() {
     const {selected, id} = this.props;
+    const bsClass = (selected===id) ? "activ" : null;
     return (
-      <Button bsStyle="default cst-wdth" bsSize="large" 
-              onClick={this.handleClick} active={id==selected}>
+      <Button bsStyle={"default def " +bsClass} bsSize="large" 
+              onClick={this.handleClick}>
                 {typ[this.props.type]}
       </Button>
     );

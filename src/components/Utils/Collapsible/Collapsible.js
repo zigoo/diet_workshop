@@ -24,7 +24,7 @@ export class Collapsible extends Component {
 		return (
 		  <div className="Collapsible">
 		    <Button 
-              bsStyle="default cst-wdth" bsSize="large" 
+              bsStyle="default def" bsSize="large" 
               onClick={(e) => this.handleClick(e)}>
                 {title} 
             </Button>	        
