@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
 import { Button } from 'react-bootstrap';
+import { bootstrapUtils } from 'react-bootstrap/lib/utils';
   
 import  typ from './types.js'
 import './style.css';
+
+bootstrapUtils.addStyle(Button, 'def');
 
 class MealBtn extends Component {
   handleClick = () => {
@@ -16,9 +19,9 @@ class MealBtn extends Component {
   
   render() {
     const {selected, id} = this.props;
-    const bsClass = (selected===id) ? "activ" : null;
+    const bsClass = (selected===id) ? " activ" : '';
     return (
-      <Button bsStyle={"default def " +bsClass} bsSize="large" 
+      <Button bsStyle="default" className={"def " +bsClass} bsSize="large" 
               onClick={this.handleClick}>
                 {typ[this.props.type]}
       </Button>
