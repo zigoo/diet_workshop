@@ -19,7 +19,7 @@ class List extends Component {
   }
   render() {
     const {items} = this.props;
-    const list = items.filter(item => item.name)
+    const list = items.filter(item => item.name);
     return (
       <ul className="List">
       {

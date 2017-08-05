@@ -14,7 +14,6 @@ class MealDescription extends Component {
               {hint}
           </p>
           <br />
-          <h3>na razie dzialaja daty 1-10!!</h3>
         </div>
       </div>
     );

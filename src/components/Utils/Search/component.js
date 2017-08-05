@@ -27,20 +27,20 @@ class Search extends Component {
     return (
       <div className="Search">
         <Collapsible title='Szukaj'>       
-        <div className="Utils_find-box">
-          <Row>           
-            <form>
-              <FormGroup controlId="Utils_find">
-                <FormControl bsSize="small" bsClass="form-control form-control_custom"
-                  type="text" value={this.state.value}
-                    placeholder="" onChange={this.handleChange} />
-                  </FormGroup>
+          <div className="Utils_find-box">
+            <Row>           
+              <form>
+                <FormGroup controlId="Utils_find">
+                  <FormControl bsSize="small" bsClass="form-control form-control_custom"
+                    type="text" value={this.state.value}
+                      placeholder="" onChange={this.handleChange} />
+                    </FormGroup>
              </form>  
-          </Row>
-          <Row> 
-            <List items={this.state.items} />
-          </Row>
-        </div>
+            </Row>
+            <Row> 
+              <List items={this.state.items} />
+            </Row>
+          </div>
         </Collapsible>
       </div>
     );
