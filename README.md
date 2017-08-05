@@ -1,3 +1,12 @@
-﻿diet workshop; making in progress
+﻿# Diet workshop
+in progress
 
-git clone -> npm install -> npm start
+## How to install
+'''
+git clone
+npm install
+cd diet_workshop (or other folder you have saved app to)
+npm start
+
+## Technologies used:
+### React with Redux
