@@ -1,6 +1,7 @@
-export default function setSelected(typ) {
+export default function setSelected(typ,selectedId) {
   return {
    type: 'SELECTED',
-   typ
+   	typ,
+   	selectedId
   }
 }

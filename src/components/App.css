@@ -8,3 +8,14 @@
 	margin-top: 5%;
 }
 
+body {
+	  margin-bottom: 60px;
+}
+#footer {
+	 position: absolute;
+  bottom: 0;
+  width: 90%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: white;
+}

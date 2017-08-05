@@ -7,7 +7,8 @@ const SELECTED_DATE = 'SELECTED_DATE';
 const initialState = {
   meals,
   selectedMeal: 1,
-  selectedDate: 1
+  selectedDate: 1,
+  selectedId: 111
 };
 
 
@@ -16,7 +17,8 @@ export default function meal (state = initialState , action ) {
     case SELECTED:
       return {
         ...state,
-        selectedMeal: action.typ
+        selectedMeal: action.typ,
+        selectedId: action.selectedId
       }
     case SELECTED_DATE:
       return {

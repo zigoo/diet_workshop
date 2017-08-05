@@ -10,8 +10,10 @@ class MealChoice extends Component {
   }
   
   handleClick(typ) {
-   const {setSelected} = this.props
-   setSelected(typ);
+   const {setSelected} = this.props;
+   const {id} = this.props.selectedId;
+   
+   setSelected(typ,id);
   }
 
   render() {
