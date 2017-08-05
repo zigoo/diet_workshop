@@ -1,5 +1,6 @@
 .Utils_find-box {
   color: #f44277;
+ 
 }
 
 .li, .ul {
@@ -9,6 +10,25 @@
 
 input{
    text-align:center;
+   width: 100%;
 }
 
+.form-control_custom {
+	width: 100%;
+	color:gray;
+	background-color: #BFEFFF;
+}
 
+.form-group_custom {
+	width: 100%;
+}
+
+ 
+.input-sm {
+    height: 20px;
+ padding: 5px 10px; 
+    font-size: 12px;
+    line-height: 1.5;
+   border-radius: 3px;
+}
+ 

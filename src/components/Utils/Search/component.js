@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js'
+
+import Collapsible from '../Collapsible/Collapsible.js'
 import './style.css';
   
 
@@ -26,22 +28,22 @@ class Utils extends Component {
      
     return (
       <div className="Utils">
+        <Collapsible title='Szukaj'>       
         <div className="Utils_find-box">
-          <Row>
-            <Col xsOffset={3} md={6}> 
-              <form>
-                <FormGroup controlId="Utils_find">
-                  <FormControl
-                    type="text" value={this.state.value}
-                     placeholder="szukaj" onChange={this.handleChange} />
+          <Row>           
+            <form>
+              <FormGroup controlId="Utils_find">
+                <FormControl bsSize="small" bsClass="form-control form-control_custom"
+                  type="text" value={this.state.value}
+                    placeholder="" onChange={this.handleChange} />
                   </FormGroup>
-              </form>
-            </Col> 
+             </form>  
           </Row>
           <Row> 
             <List items={this.state.items} />
           </Row>
         </div>
+        </Collapsible>
       </div>
     );
   }
