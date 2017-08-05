@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ButtonToolbar } from 'react-bootstrap';
-import MealBtn from './Button/Button';
-import setSelected from './actions';
+import MealBtn from './Button/container.js';
 import './style.css';
 
 class MealChoice extends Component {
@@ -11,8 +10,8 @@ class MealChoice extends Component {
   }
   
   handleClick(typ) {
-  	const { dispatch } = this.props;
-  	dispatch(setSelected(typ));
+   const {setSelected} = this.props
+   setSelected(typ);
   }
 
   render() {
@@ -20,7 +19,7 @@ class MealChoice extends Component {
     return (
       <div className="MealChoice">  
         <ButtonToolbar>
-          {btns_len.map(btn => <MealBtn {...{type: btn.type, onClick: this.handleClick, key: btn.key} } /> )}
+          {btns_len.map(btn => <MealBtn {...{type: btn.type, onClick: this.handleClick, key: btn.key, id: btn.key} } /> )}
         </ButtonToolbar>
       </div>
     );

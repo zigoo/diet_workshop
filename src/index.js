@@ -11,7 +11,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
  
 
-import meal from './ridax/meal.js'; 
+import meal from './ridax/meal.js';
 import App from './components/App.js';
  
 

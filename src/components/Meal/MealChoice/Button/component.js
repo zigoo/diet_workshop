@@ -5,7 +5,6 @@ import { Button } from 'react-bootstrap';
 import  typ from './types.js'
 import './style.css';
 
-
 class MealBtn extends Component {
   handleClick = () => {
     const { onClick, type } = this.props;
@@ -15,10 +14,11 @@ class MealBtn extends Component {
     browserHistory.push('/'+path)
   }
   
-  render() {  
+  render() { 
+    const {selected, id} = this.props;
     return (
       <Button bsStyle="default cst-wdth" bsSize="large" 
-              onClick={this.handleClick} >
+              onClick={this.handleClick} active={id==selected}>
                 {typ[this.props.type]}
       </Button>
     );
