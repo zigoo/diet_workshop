@@ -1,6 +1,6 @@
-export function sendDateToStore(date=new Date()) {
+export function sendDateToStore(day=1) {
 	return {
 		type:'SELECTED_DATE',
-		date
+		day
 	}
 }

@@ -19,7 +19,6 @@ class Search extends Component {
  
     this.setState({ value: e.target.value });
       filteredList = initialList.filter( item => item.name.toLowerCase().search(e.target.value.toLowerCase()) !== -1)
-                                .map(x=> x.name);
     this.setState({items: filteredList}) 
   }
 

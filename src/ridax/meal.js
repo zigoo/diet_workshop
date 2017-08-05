@@ -7,7 +7,7 @@ const SELECTED_DATE = 'SELECTED_DATE';
 const initialState = {
   meals,
   selectedMeal: 1,
-  selectedDate: null
+  selectedDate: 1
 };
 
 
@@ -21,7 +21,7 @@ export default function meal (state = initialState , action ) {
     case SELECTED_DATE:
       return {
         ...state,
-        selectedDate: action.date
+        selectedDate: action.day
       }
     default: 
       return {...state}

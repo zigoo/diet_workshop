@@ -9,10 +9,13 @@ import './style.css';
 
 
 class Calendar extends Component {
-  handleDayClick(day, { selected }) {
-  	const { sendDateToStore } = this.props;
+  handleDayClick(day, { selected={} }) {
+  	const { sendDateToStore  } = this.props; 
     try {
-      sendDateToStore(day.toLocaleDateString());
+      const helper = day.toLocaleDateString()
+      const daySentFromCalender = helper !== null ? parseInt(helper.substring(0,2),10) : 1;
+ 
+      sendDateToStore(daySentFromCalender);
     }
     catch (err) {
       console.log(err)
