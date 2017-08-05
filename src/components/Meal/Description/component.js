@@ -4,7 +4,7 @@ import './style.css';
 class MealDescription extends Component {
   render() {
     const mealType = ['sniadanie', 'pozne sniadanie', 'obiad', 'kolacja']
-    const {desc, name, hint, type } = this.props.meal !== undefined ? this.props.meal : '';
+    const {desc, name, hint, type } = this.props.selectedId !== undefined ? this.props.selectedId : '';
    
     return (
       <div>

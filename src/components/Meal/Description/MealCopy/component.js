@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import {Well, Collapse, Button} from 'react-bootstrap'
+import { Button} from 'react-bootstrap'
 
-class MealCopy extends React.Component {
-	constructor() {
-	  super()
-    
-	}
-
+class MealCopy extends Component {
 	render() {
 	  const {desc} = this.props.selectedId;
 	  return (

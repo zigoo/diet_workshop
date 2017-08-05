@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Well, Collapse, Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 
 class MealShare extends React.Component {
 	render() {
