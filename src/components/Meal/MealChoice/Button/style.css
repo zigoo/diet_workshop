@@ -1,6 +1,11 @@
 .cst-wdth {
 	width: 100%;
-	min-width: 100px;
+    display: block;
+    color: white;
+    border: 1px solid  #DAEAEF;
+    border-radius: 8.5px;
+    outline: none;
+    background-image: linear-gradient(to right, #93cede 0%,#75bdd1 41%,#49a5bf 100%);
 }
  
- 
+    //background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
