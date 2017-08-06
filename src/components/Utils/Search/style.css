@@ -37,6 +37,15 @@ input {
   margin-right: -15px;
 }
 
+#one {
+  margin-left: -80px;
+  margin-top: 5px;
+}
+
+.not {
+  visibility: hidden;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

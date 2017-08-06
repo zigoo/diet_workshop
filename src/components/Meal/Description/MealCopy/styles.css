@@ -5,3 +5,9 @@
 #copy *:hover {
   color: gray;
 }
+
+
+#three {
+  margin-left: -40px;
+  margin-top: 6px;
+}

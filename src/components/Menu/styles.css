@@ -1,43 +1,44 @@
 body {
-          overflow-x: hidden; 
-    overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
+
 img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .navbar {
-    border: none !important;
-    margin-top: 0px;
-    padding-top: 0px;
-    border-color: black;
-    background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
-    margin-bottom: 0px;
-    border-radius: 0;
+  border: none !important;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-color: black;
+  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
+  margin-bottom: 0px;
+  border-radius: 0;
 }
 
 .navbar-header,
 .dropdownc {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .dropdown-toggle {
-    color: inherit;
+  color: inherit;
 }
 
 #dropdown,
 #dropdown2 {
-    background-color: inherit;
+  background-color: inherit;
 }
 
 
 #dropdown2 {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .MenuLeft {
-    height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
 }
