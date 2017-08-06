@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <Grid fluid={false}>
-          <Row id="temp">
+          <Row>
             <Col md={12}>
               <MenuTop />
             </Col>
@@ -41,4 +41,5 @@ class App extends Component {
 }
 
 export default App;
- 
+/*
+        */

@@ -33,7 +33,7 @@ img {
 }
 
 .MenuLeft {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
 }
