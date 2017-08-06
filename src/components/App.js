@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import MenuTop from './Menu/MenuTop.js';
 import MenuLeft from './Menu/MenuLeft/container.js';
 import MealDescripton from './Meal/Description/container.js';
-import Calendar from './Calendar/container.js'
-import Search from './Utils/Search/component.js'
+import Calendar from './Calendar/container.js';
+import Search from './Utils/Search/component.js';
 import MealCopy from './Meal/Description/MealCopy/container.js';
 import MealShare from './Meal/Description/MealShare/component.js';
 
@@ -18,20 +18,20 @@ class App extends Component {
       <div className="App">
         <Grid fluid={false}>
           <Row id="temp">
-           <Col md={12}>
-            <MenuTop />
-          </Col>
+            <Col md={12}>
+              <MenuTop />
+            </Col>
           </Row>
           <Row>  
             <Col md={2} className="col-custom" >
-               <MenuLeft />
+              <MenuLeft />
             </Col>
             <Col md={8} >
-               <MealDescripton /> 
+              <MealDescripton /> 
             </Col>
             <Col md={2} className="col-custom">
-               <Search />    
-               <Calendar />       
+              <Search />    
+              <Calendar />       
             </Col>
           </Row>
         </Grid>

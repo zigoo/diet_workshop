@@ -3,7 +3,7 @@ import './style.css';
 
 class MealDescription extends Component {
   render() {
-    const mealType = ['sniadanie', 'pozne sniadanie', 'obiad', 'kolacja']
+    const mealType = ['sniadanie', 'pozne sniadanie', 'obiad', 'kolacja'];
     const {desc, name, hint, type } = this.props.selectedId !== undefined ? this.props.selectedId : '';
    
     return (
@@ -12,9 +12,9 @@ class MealDescription extends Component {
           {/* add r-bootstrap tooltips */}
           <h3>{name}</h3> 
           {mealType[type-1]} <br /><br />
-              {desc} <br />
+          {desc} <br />
           <p>
-              {hint}
+            {hint}
           </p>
           <br />
         </div>
