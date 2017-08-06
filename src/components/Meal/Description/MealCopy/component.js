@@ -9,12 +9,14 @@ class MealCopy extends Component {
     return (
       <div className="MealCopy">
         <CopyToClipboard text={desc}>
-          <Button 
-            bsStyle="default" className="def" 
-            bsSize="small" >  
-            <Glyphicon glyph="copy">copy</Glyphicon>        
-            {/*glyphicon*/}
-          </Button>
+          <span id="copy">
+            <Button 
+              bsStyle="default" className="def" 
+              bsSize="large" >  
+                kopiuj 
+                  <Glyphicon glyph="copy"></Glyphicon>
+            </Button>
+          </span>
         </CopyToClipboard>
       </div>
     );
