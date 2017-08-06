@@ -34,12 +34,8 @@ class Calendar extends Component {
         <Collapsible title='Kalendarz'>
   	      <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
                           localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
-  	      <p>
-           {selectedDay
-             ? selectedDay
-             : 'wybierz date'
-           } <br/>
-           Ilość przepisów: {mealsQuantity}
+  	      <p>   
+            Ilość przepisów: {mealsQuantity}
           </p>
         </Collapsible>
    	  </div> 

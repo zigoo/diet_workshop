@@ -1,6 +1,6 @@
 import Calendar from './component.js';
 import { connect } from 'react-redux';
-import { sendDateToStore } from './actions.js';
+import { sendDateToStore } from '../Utils/Actions/actions.js';
 
 function mapStateToProps(state){
   return {

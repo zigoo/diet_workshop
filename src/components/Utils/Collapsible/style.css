@@ -1,7 +1,25 @@
 .well-custom {
   padding-top: 0px;
-  padding-left: 15px;
+  padding-left: 0px;
   padding-right: 15px;
   margin-bottom: 0px;
   min-height: 10px;
+}
+
+.def:active,
+.def:hover,
+.def:focus {
+  color: white;
+}
+
+.def {
+  width: 100%;
+  display: block;
+  color: white;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }

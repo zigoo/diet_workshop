@@ -1,0 +1,10 @@
+.glyphicon {
+    color: black;
+    font-size: 15px;
+}
+
+.glyphicon:hover,
+.glyphicon:active,
+.glyphicon:focus {
+    color: white;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { Button} from 'react-bootstrap'
+import { Glyphicon, Button} from 'react-bootstrap'
+import './styles.css';
 
 class MealCopy extends Component {
 	render() {
@@ -10,8 +11,8 @@ class MealCopy extends Component {
 	  	<CopyToClipboard text={desc}>
 	  	  <Button 
 	  	    bsStyle="default" className="def" 
-	  	    bsSize="small" >          
-	  		MealCopy
+	  	    bsSize="small" >  
+	  	    <Glyphicon glyph="copy">copy</Glyphicon>        
 	  	{/*glyphicon*/}
           </Button>
          </CopyToClipboard>
@@ -21,3 +22,4 @@ class MealCopy extends Component {
 }
 
 export default MealCopy;
+ 

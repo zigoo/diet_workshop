@@ -6,13 +6,13 @@ table {
 }
 
 .Calendarr {
-  font-family:  "Lucida Grande", sans-serif;
-  font-size: 16px;  
-  cursor: pointer;
-  text-align: center;
-  margin-top: 1px;
+    font-family: "Lucida Grande", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
 }
 
-.Row {
-	margin: 0;
+.form-group {
+    padding-left: 15px;
+    margin-bottom: 15px;
 }

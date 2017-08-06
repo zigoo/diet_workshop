@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js'
 import Collapsible from '../Collapsible/Collapsible.js'
+import { FormGroup, FormControl } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import './style.css';
   
 

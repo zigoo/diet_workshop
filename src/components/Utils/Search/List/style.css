@@ -1,7 +1,7 @@
 .List {
   max-height: 200px;
   overflow-y: scroll;
-  color:#358cae;
+  color: #358cae;
 }
 
 ul {
@@ -9,15 +9,14 @@ ul {
 }
 
 li:nth-of-type(1n+15) {
-    display: none;
-} 
+  display: none;
+}
 
 li:nth-child(odd) {
-	color: #2d9287;
+  color: #2d9287;
 }
- 
 
 li:hover {
-	color: darkgray;
-	cursor: pointer;
+  color: darkgray;
+  cursor: pointer;
 }

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import setSelected from '../../../Meal/MealChoice/actions.js';
+import setSelected , { sendDateToStore }from '../../Actions/actions.js';
 import { connect } from 'react-redux';
-import { sendDateToStore } from '../../../Calendar/actions.js';
-
 import './style.css';
-
 
 class List extends Component {
   constructor(){

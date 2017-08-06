@@ -1,0 +1,39 @@
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar {
+    border: none !important;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-color: black;
+    background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
+    margin-bottom: 0px;
+    border-radius: 0;
+}
+
+.navbar-header,
+.dropdownc {
+    padding-top: 10px;
+}
+
+.dropdown-toggle {
+    color: inherit;
+}
+
+#dropdown,
+#dropdown2 {
+    background-color: inherit;
+}
+
+
+#dropdown2 {
+    margin-right: 20px;
+}
+
+.MenuLeft {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
+}

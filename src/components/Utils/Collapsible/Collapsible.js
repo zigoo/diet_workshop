@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Well, Collapse, Button} from 'react-bootstrap'
-
 import './style.css';
 
 export class Collapsible extends Component {
@@ -21,10 +20,11 @@ export class Collapsible extends Component {
 	render() {
 		const {children, title} = this.props;
 		const {isExpanded} = this.state;
+		const bsClass = isExpanded ? " activ" : '';
 		return (
 		  <div className="Collapsible">
 		    <Button 
-              bsStyle="default" className="def" bsSize="large" 
+              bsStyle="default" className={"def" +bsClass} bsSize="large" 
               onClick={(e) => this.handleClick(e)}>
                 {title} 
             </Button>	        
