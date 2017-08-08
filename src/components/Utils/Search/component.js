@@ -38,7 +38,7 @@ class Search extends Component {
 
     return (
       <div className="Search">
-        {tooltip}    
+        {/*tooltip */}    
         <div id="temp" onClick={this.handleVisibility}>
           <Collapsible title='Szukaj'>       
             <div className="Utils_find-box">

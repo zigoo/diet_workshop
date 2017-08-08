@@ -9,9 +9,8 @@
   border-radius: 0;
   outline: none;
   border: none;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin: 0;
+  padding-right: 0;
   background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
 }
 

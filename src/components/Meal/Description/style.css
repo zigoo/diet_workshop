@@ -1,6 +1,6 @@
 .MealDescription {
 	margin-top: 2%;
-    text-align: left;
+    text-align: center;
 }
 
 h3 {
@@ -14,4 +14,11 @@ p {
     margin: 0;
     color: gray;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 736px) { 
+	.MealDescription {
+		margin-top: 2%;
+		text-align: left;
+	}
 }
