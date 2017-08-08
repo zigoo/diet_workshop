@@ -1,17 +1,29 @@
 body {
-  height: 100%;
-  width: 100%;
   padding-top: 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "menuu menuu menuu" 
+  "menuleft desc info" 
+}
+
+.menuu {
+  grid-area: menuu;
+}
+
+.menuleft {
+  grid-area: menuleft;
+}
+
+.desc {
+  grid-area: desc;
+}
+
+.info {
+  grid-area: info;
+}
  
-}
-
-.container {
-  margin: 0;
-  width: 100%;
-}
-
-.col-custom {
-  padding-left: 0px;
-  padding-right: 0px;
-  min-height: 100vh;
-}

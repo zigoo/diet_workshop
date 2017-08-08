@@ -7,22 +7,16 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { Router, Route, browserHistory } from 'react-router';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
-//import { routerMiddleware } from 'react-router-redux'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
  
-
 import meal from './ridax/meal.js';
 import App from './components/App.js';
- 
-
-//const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 export const reducer = combineReducers({
   meal,
   routing: routerReducer
 });
-//, composeWithDevTools(applyMiddleware(middleware)) 
  
 export const store = createStore(
   reducer,
