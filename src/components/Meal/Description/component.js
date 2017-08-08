@@ -9,10 +9,11 @@ class MealDescription extends Component {
     return (
       <div>
         <div className="MealDescription">
-          {/* add r-bootstrap tooltips */}
-          <h3>{name}</h3> 
-          {mealType[type-1]} <br /><br />
-          {desc} <br />
+          <div className="MealDescription-title">
+            <h3>{name}</h3> 
+            {mealType[type-1]}
+          </div> <br />
+            {desc} <br />
           <p>
             {hint}
           </p>

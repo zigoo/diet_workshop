@@ -39,7 +39,7 @@ class Search extends Component {
     return (
       <div className="Search">
         {/*tooltip */}    
-        <div id="temp" onClick={this.handleVisibility}>
+        <div id="click_holder" onClick={this.handleVisibility}>
           <Collapsible title='Szukaj'>       
             <div className="Utils_find-box">
               <Row>           

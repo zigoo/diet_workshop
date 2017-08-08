@@ -13,6 +13,7 @@ input {
 #Utils_find {
   margin: 0;
 }
+
 .li,
 .ul {
   text: #f44277;
@@ -20,19 +21,19 @@ input {
 }
 
 .form-group {
-    padding-left: 0;
- 
+  padding-left: 0;
 }
+
 .form-control_custom {
   width: 100%;
-  color: gray;
+  color: red;
   background-color: #BFEFFF;
 }
 
 .input-sm {
   height: 20px;
   width: 100%;
- 
+
   padding: 0;
   font-size: 12px;
   border-radius: 3px;

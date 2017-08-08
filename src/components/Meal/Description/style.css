@@ -1,8 +1,11 @@
 .MealDescription {
 	margin-top: 2%;
-    text-align: center;
+    text-align: left;
 }
 
+.MealDescription-title {
+text-align: center;
+}
 h3 {
     margin: 0;
     color: #096af0;

@@ -3,6 +3,10 @@ body {
   overflow-y: auto;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 img {
   width: 30px;
   height: 30px;
@@ -45,6 +49,11 @@ img {
 .MenuLeft {
     display: none; 
 }
+
+#dropdown2 {
+  display: none;
+}
+
 @media screen and (min-width: 736px) {
   body {
   overflow-x: hidden;
@@ -53,4 +62,7 @@ img {
   .MenuLeft {
     display: block; 
   }
+  #dropdown2 {
+  display: block;
+}
 }
