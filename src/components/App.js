@@ -14,6 +14,8 @@ class App extends Component {
   render() {
     return (
       <div className="grid">
+
+        
         <div className="menuu">
           <MenuTop />
         </div>
@@ -29,6 +31,10 @@ class App extends Component {
           <Calendar />
           <MealCopy />  
         </div>
+
+        <div className="mobile-only">
+          Switch to mobile/responsive view please
+         </div>
       </div>
     );
   }

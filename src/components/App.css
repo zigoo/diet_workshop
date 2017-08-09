@@ -29,17 +29,6 @@ html {
  
 }
 
-/*.info {
-  width: 100%;
-  grid-area: info;
-  min-height: 15%;
-  justify-content: center;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  position: fixed;
-  bottom: 0;
-}*/
-
 .info {
   width: 100%;
   grid-area: info;
@@ -54,11 +43,14 @@ html {
     position: fixed;
     bottom: 0;
   }
+  .mobile-only {
+    visibility: hidden;
+  }
 }
 
 
 @media screen and (min-width: 736px) {
-  .grid {
+ /* .grid {
     display: grid;
     grid-template-columns: 15% 67% 18%;
     grid-template-rows: auto auto;
@@ -66,7 +58,7 @@ html {
     "menuu menuu menuu"
     "menuleft desc info";
   }
-  .menuu {
+  .menuu,{
     grid-area: menuu;
   }
 
@@ -80,5 +72,22 @@ html {
 
   .info {
     grid-area: info;
+  }*/
+  .menuu, .menuleft, .desc, .info {
+    display: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    display: block;
+  }
+
+  .mobile-only {
+    display:block;
+    font-size: 24px;
+    text-align: center;
+    color:black;
+    margin: 0 auto;
   }
 }

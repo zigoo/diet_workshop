@@ -35,7 +35,6 @@ p {
 
 @media screen and (max-width: 736px) {
   .MealDescription-hint {
-    position: fixed;
-    margin-top: 30%;
+    margin-top: 2%;
   }
 }
