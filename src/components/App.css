@@ -8,11 +8,7 @@ body {
 html {
   height: 100%;
 }
-
-* {
-  box-sizing: border-box;
-}
-
+ 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -30,10 +26,10 @@ html {
 
 .desc {
   grid-area: desc;
-  min-height: 70%;
+ 
 }
 
-.info {
+/*.info {
   width: 100%;
   grid-area: info;
   min-height: 15%;
@@ -42,7 +38,24 @@ html {
   grid-row-end: 4;
   position: fixed;
   bottom: 0;
+}*/
+
+.info {
+  width: 100%;
+  grid-area: info;
+  min-height: 15%;
+  justify-content: center;
 }
+
+@media screen and (max-width: 736px) {
+  .info {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
 
 @media screen and (min-width: 736px) {
   .grid {

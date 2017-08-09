@@ -16,8 +16,9 @@ input {
 
 .li,
 .ul {
-  text: #f44277;
+  color: #f44277;
   list-style: none;
+  background-color: inherit;
 }
 
 .form-group {
@@ -27,11 +28,11 @@ input {
 .form-control_custom {
   width: 100%;
   color: red;
-  background-color: #BFEFFF;
+  background-color: lightgray;
 }
 
 .input-sm {
-  height: 20px;
+
   width: 100%;
 
   padding: 0;

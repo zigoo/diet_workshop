@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import './style.css';
 
@@ -14,9 +15,11 @@ class MealDescription extends Component {
             {mealType[type-1]}
           </div> <br />
             {desc} <br />
-          <p>
+          <div className="MealDescription-hint">
+           <p>
             {hint}
-          </p>
+           </p>
+          </div>
           <br />
         </div>
       </div>

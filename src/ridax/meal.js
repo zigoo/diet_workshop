@@ -1,5 +1,6 @@
 /* eslint-disable */
 import meals from '../helpers/meals.js';
+import { LOCATION_CHANGE } from 'react-router-redux';
 
 const SELECTED = 'SELECTED';
 const SELECTED_DATE = 'SELECTED_DATE';
@@ -25,6 +26,14 @@ export default function meal (state = initialState , action ) {
         ...state,
         selectedDate: action.day
       }
+    case LOCATION_CHANGE:
+      const pathname = action.payload.pathname;
+      const [_, operation = ""] = pathname.split('/');
+      console.log('opera:',operation)
+      return {
+        ...state,
+        operation
+      }; 
     default: 
       return {...state}
     }

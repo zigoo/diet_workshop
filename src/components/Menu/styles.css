@@ -12,18 +12,36 @@ img {
   height: 30px;
 }
 
-.container {
-  margin:0;
-  width: 100%;
-}
 .navbar {
-  border: none;;
+  border: none;
+  ;
   margin-top: 0px;
   padding-top: 0px;
   border-color: black;
   margin-bottom: 0px;
   border-radius: 0;
   background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
+}
+
+.navbar-nav {
+  position: relative;
+}
+
+li.dropdown {
+  position: static;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-menu>li {
+  display: inline-block;
+}
+
+.container {
+  margin: 0;
+  width: 100%;
 }
 
 .navbar-header,
@@ -47,7 +65,7 @@ img {
 }
 
 .MenuLeft {
-    display: none; 
+  display: none;
 }
 
 #dropdown2 {
@@ -56,13 +74,13 @@ img {
 
 @media screen and (min-width: 736px) {
   body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
   .MenuLeft {
-    display: block; 
+    display: block;
   }
   #dropdown2 {
-  display: block;
-}
+    display: block;
+  }
 }

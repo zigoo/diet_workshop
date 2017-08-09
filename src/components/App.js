@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import MenuTop from './Menu/MenuTop.js';
 import MenuLeft from './Menu/MenuLeft/container.js';

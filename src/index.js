@@ -1,4 +1,4 @@
-//  eslint-disable */
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
  
@@ -11,6 +11,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
  
 import meal from './ridax/meal.js';
 import App from './components/App.js';
+
 
 
 export const reducer = combineReducers({

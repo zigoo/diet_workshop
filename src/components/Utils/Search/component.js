@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js';
