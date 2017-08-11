@@ -6,7 +6,7 @@ import './styles.css';
 
 class MenuTop extends Component {
   render() {
-    const avatarUrl = Parser('<div><img className="img-responsive img-circle" src="https://image.ibb.co/fJ946a/avatar.png" alt="avatar"> </img></div>');
+   // const avatarUrl = Parser('<div><img className="img-responsive img-circle" src="https://image.ibb.co/fJ946a/avatar.png" alt="avatar"> </img></div>');
     return (
       <div>
         <Navbar inverse collapseOnSelect fixedTop>
@@ -33,14 +33,6 @@ class MenuTop extends Component {
                 </LinkContainer>
               </NavDropdown>
             </Nav>
-            <Nav pullRight>
-              <NavDropdown eventKey={4} title={avatarUrl} id="dropdown2" className="nopadding" noCaret>
-                <MenuItem eventKey={4.1}>Action</MenuItem>
-                <MenuItem eventKey={4.2}>Another action</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={4.3}>wyloguj</MenuItem>
-              </NavDropdown>
-            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>
@@ -49,3 +41,11 @@ class MenuTop extends Component {
 }
 
 export default MenuTop;
+            /*<Nav pullRight>
+              <NavDropdown eventKey={4} title={avatarUrl} id="dropdown2" className="nopadding" noCaret>
+                <MenuItem eventKey={4.1}>Action</MenuItem>
+                <MenuItem eventKey={4.2}>Another action</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey={4.3}>wyloguj</MenuItem>
+              </NavDropdown>
+            </Nav>*/

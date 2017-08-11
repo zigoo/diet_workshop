@@ -19,9 +19,6 @@ class App extends Component {
         <div className="menuu">
           <MenuTop />
         </div>
-        <div className="menuleft">
-          <MenuLeft />
-        </div>
         <div className="desc">
          {this.props.children}
         </div>
