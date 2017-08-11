@@ -1,0 +1,16 @@
+.eaten_grid {
+ display: grid;
+ grid-template-columns: auto;
+ grid-template-rows: 1fr 1fr;
+ grid-template-areas:
+ "Eaten"
+ "Status";
+}
+
+.Eaten {
+ grid-area: Eaten; 
+}
+
+.Status {
+ grid-area: Status;
+}

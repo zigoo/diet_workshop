@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import DayPicker from 'react-day-picker';
 import LocaleUtils from 'react-day-picker/moment';
 import Collapsible from '../Utils/Collapsible/Collapsible.js';
+import { browserHistory } from 'react-router';
 
 import 'moment/locale/pl';
 import 'react-day-picker/lib/style.css';
 import './style.css';
-
 
 class Calendar extends Component {
   handleDayClick(day, { selected={} }) {
@@ -22,6 +22,10 @@ class Calendar extends Component {
     } 
   }
 
+  handleRoute() {
+    browserHistory.push('/meal');
+  }
+
   render() {
     const { selectedDay } = this.props;
     const mealsQuantity = this.props.meals.length;
@@ -30,7 +34,7 @@ class Calendar extends Component {
       'sierpień','wrzesień','październik','listopad','grudzień'];
                     
     return(
-      <div className="Calendarr">	
+      <div className="Calendarr" onClick={this.handleRoute}>	
         <Collapsible title='Kalendarz'>
           <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
             localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />

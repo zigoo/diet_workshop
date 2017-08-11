@@ -38,3 +38,21 @@ p {
     margin-top: 2%;
   }
 }
+
+.description_grid {
+  display: grid;
+  height: 400px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% 20%;
+  grid-template-areas: 
+  "meal-desc"
+  "meal-eaten"
+}
+
+.meal-desc {
+  grid-area: meal-desc;
+}
+
+.meal-eaten {
+  grid-area: meal-eaten;
+}

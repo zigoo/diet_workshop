@@ -4,18 +4,21 @@ import ReactDOM from 'react-dom';
  
 import { Provider }	 from 'react-redux';
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute, IndexRedirect } from 'react-router';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
  
 import meal from './ridax/meal.js';
+import mealEaten from './ridax/mealEaten.js';
 import App from './components/App.js';
-
+import MealDescripton from './components/Meal/Description/container.js';
+import Statsy from './components/Statsy/component.js';
 
 
 export const reducer = combineReducers({
   meal,
+  mealEaten,
   routing: routerReducer
 });
  
@@ -31,12 +34,13 @@ ReactDOM.render(
   <Provider store={store}>
     <div>
       <Router history={history}>
-        <Route path="/" component={App} />
-        <Route path="/sniadanie" component={App}/>
-        <Route path="/drugieSniadanie" component={App}/>
-        <Route path="/obiad" component={App}/>
-        <Route path="/kolacja" component={App}/>
+        <Route path="/" component={App} >
+        <IndexRedirect to="/meal" />
+          <Route path="/meal" component={MealDescripton}/>
+          <Route path="/statsy" component={Statsy}/>
+        </Route>
       </Router>
     </div>
   </Provider> 
   , document.getElementById('root'));
+       // <IndexRoute component={App}/>

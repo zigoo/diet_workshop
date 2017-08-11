@@ -1,5 +1,5 @@
-/* eslint-disable */
 import React, { Component } from 'react';
+import Eaten from '../Eaten/component.js';
 import './style.css';
 
 class MealDescription extends Component {
@@ -8,21 +8,27 @@ class MealDescription extends Component {
     const {desc, name, hint, type } = this.props.selectedId !== undefined ? this.props.selectedId : '';
    
     return (
-      <div>
-        <div className="MealDescription">
-          <div className="MealDescription-title">
-            <h3>{name}</h3> 
-            {mealType[type-1]}
-          </div> <br />
-            {desc} <br />
-          <div className="MealDescription-hint">
-           <p>
-            {hint}
-           </p>
+    <div>
+      <div className="description_grid">
+        <div className="meal-desc">
+          <div className="MealDescription">
+            <div className="MealDescription-title">
+              <h3>{name}</h3> 
+               {mealType[type-1]}
+            </div> <br />
+                {desc} <br />
+            <div className="MealDescription-hint">
+              <p>
+               {hint}
+              </p>
+            </div>
           </div>
-          <br />
+        </div>
+        <div className="meal-eaten">
+          <Eaten />
         </div>
       </div>
+    </div>
     );
   }
 }

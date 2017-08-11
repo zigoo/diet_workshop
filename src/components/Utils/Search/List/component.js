@@ -8,6 +8,7 @@ class List extends Component {
     super();
     this.handleClick = this.handleClick.bind(this);
   }
+
   handleClick(typ,day) {
     const { setSelected, sendDateToStore } = this.props;
     

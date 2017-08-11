@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js';
 import Collapsible from '../Collapsible/Collapsible.js';
+import { browserHistory } from 'react-router';
 import { Row, FormGroup, FormControl, Tooltip} from 'react-bootstrap';
 import './style.css';
   
@@ -12,7 +13,7 @@ class Search extends Component {
     super();
     this.state = {value: '', meals:meals, items:[], visible: true};
     this.handleChange = this.handleChange.bind(this);
-    this.handleVisibility = this.handleVisibility.bind(this);
+ 
   }
   handleChange(e) {
     let initialList = this.state.meals;
@@ -22,25 +23,26 @@ class Search extends Component {
     filteredList = initialList.filter( item => item.name.toLowerCase().search(e.target.value.toLowerCase()) !== -1);
     this.setState({items: filteredList}); 
   }
-
-  handleVisibility() {
-    this.setState({visible: !this.state.visible});
+ 
+  handleRoute() {
+   // this.setState({visible: !this.state.visible});
+    browserHistory.push('/meal');
   }
 
   render() {
-    const visibleVar = this.state.visible ? '' : 'not';
+   /* const visibleVar = this.state.visible ? '' : 'not';
     const tooltip = ( 
       <div className={"visible "+ visibleVar} >
         <Tooltip placement="left" className="in" id="one">
              rozwiń i znajdź przepis
         </Tooltip>
       </div>
-    );
+    );*/
 
     return (
       <div className="Search">
         {/*tooltip */}    
-        <div id="click_holder" onClick={this.handleVisibility}>
+        <div id="click_holder" onClick={this.handleRoute}>
           <Collapsible title='Szukaj'>       
             <div className="Utils_find-box">
               <Row>           
