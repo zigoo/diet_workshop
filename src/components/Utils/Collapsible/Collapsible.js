@@ -14,8 +14,9 @@ export class Collapsible extends Component {
     e.preventDefault();
     this.setState({
       isExpanded: !this.state.isExpanded
-			
     });	
+    if (this.props.onClick)
+       this.props.onClick();
   }
 
   render() {

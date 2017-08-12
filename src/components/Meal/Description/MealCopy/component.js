@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { Glyphicon, Button, Tooltip, OverlayTrigger} from 'react-bootstrap';
+import { Glyphicon, Button } from 'react-bootstrap';
 import './styles.css';
 
 class MealCopy extends Component {
   render() {
     const {desc} = this.props.selectedId;
-    const tooltip = (
-      <Tooltip placement="bottom" className="in" id="three">
-         skopiuj do schowka!
-      </Tooltip>);
+    
 
     return (
       <div className="MealCopy">
-        <OverlayTrigger placement="bottom" overlay={tooltip} >
+        <div className="meal_copy">
           <CopyToClipboard text={desc}>
             <span id="copy">
               <Button 
-                bsStyle="default" className="def" 
-                bsSize="large" >  
-                   kopiuj 
-                <Glyphicon glyph="copy"></Glyphicon>
+                bsStyle="default" className="def"  bsSize="large" >  
+                  kopiuj 
               </Button>
             </span>
           </CopyToClipboard>
-        </OverlayTrigger>
+        </div>
+        <div className="meal_share">
+          <Button bsStyle="default" className="def rev-def" bsSize="large" >          
+             sharuj
+          </Button>
+        </div>
       </div>
     );
   }
 }
 
 export default MealCopy;
+  //            <Glyphicon glyph="copy"></Glyphicon>

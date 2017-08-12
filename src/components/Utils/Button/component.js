@@ -9,11 +9,15 @@ import './style.css';
 
 class MealBtn extends Component {
   handleClick = () => {
+    let x = window.location.pathname;
     const { onClick, type } = this.props;
     const path = typ[this.props.type].replace(/[^a-zA-Z]/g, "");;
 
     onClick(type)
-    browserHistory.push('/'+path)
+
+    if (x !=='/'+path) {
+      browserHistory.push('/'+path)
+    }
   }
   
   render() {

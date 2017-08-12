@@ -1,3 +1,19 @@
+.MealCopy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: 
+  "meal_copy meal_share"
+}
+
+.meal_copy {
+  grid-area: meal_copy;
+}
+
+.meal_share {
+ grid-area: meal_share;
+}
+
 .glyphicon {
   font-size: 13px;
 }
@@ -5,9 +21,4 @@
 #copy *:hover {
   color: gray;
 }
-
-
-#three {
-  margin-left: -40px;
-  margin-top: 6px;
-}
+ 

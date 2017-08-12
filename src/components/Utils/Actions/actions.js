@@ -1,4 +1,4 @@
-export default function setSelected(typ, selectedId) {
+export default function setSelected(typ, selectedId=1) {
   return {
     type: 'SELECTED',
     typ,

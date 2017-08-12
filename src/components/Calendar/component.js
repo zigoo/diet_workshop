@@ -9,12 +9,14 @@ import 'react-day-picker/lib/style.css';
 import './style.css';
 
 class Calendar extends Component {
+
   handleDayClick(day, { selected={} }) {
     const { sendDateToStore  } = this.props; 
     try {
       const helper = day.toLocaleDateString();
       const daySentFromCalender = helper !== null ? parseInt(helper.substring(0,2),10) : 1;
  
+      console.log('send')
       sendDateToStore(daySentFromCalender);
     }
     catch (err) {
@@ -23,7 +25,11 @@ class Calendar extends Component {
   }
 
   handleRoute() {
-    browserHistory.push('/meal');
+    let x = window.location.pathname;
+
+    if (x !=='/meal') {
+      browserHistory.push('/meal');
+    }
   }
 
   render() {
@@ -31,21 +37,23 @@ class Calendar extends Component {
     const mealsQuantity = this.props.meals.length;
 
     const months = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec',
-      'sierpień','wrzesień','październik','listopad','grudzień'];
-                    
+      'sierpień','wrzesień','październik','listopad','grudzień'];            
     return(
-      <div className="Calendarr" onClick={this.handleRoute}>	
-        <Collapsible title='Kalendarz'>
+      <div className="Calendarr" >	
+        <Collapsible title='Kalendarz' onClick={this.handleRoute}>
           <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
             localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
-          <p>   
+          <p>  
+            {console.log('calendar click')}
             Ilość przepisów: {mealsQuantity}
+            }
           </p>
         </Collapsible>
       </div> 
     );
   }
 }
+
 
 export default Calendar;
 

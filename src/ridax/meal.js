@@ -9,18 +9,18 @@ const initialState = {
   meals,
   selectedMeal: 1,
   selectedDate: 1,
-  selectedId: 111
+ // selectedId: 1 
 };
 
 
 export default function meal (state = initialState , action ) {
   switch (action.type) {
-    case SELECTED:
+  /*  case SELECTED:
       return {
         ...state,
         selectedMeal: action.typ,
-        selectedId: action.selectedId
-      }
+   //     selectedId: action.selectedId
+      }*/
     case SELECTED_DATE:
       return {
         ...state,
@@ -29,7 +29,7 @@ export default function meal (state = initialState , action ) {
     case LOCATION_CHANGE:
       const pathname = action.payload.pathname;
       const [_, operation = ""] = pathname.split('/');
-      console.log('opera:',operation)
+      console.log('path:',operation)
       return {
         ...state,
         operation

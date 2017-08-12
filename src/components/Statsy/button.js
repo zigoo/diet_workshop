@@ -5,7 +5,11 @@ import { browserHistory } from 'react-router';
 
 class StatsyBtn extends Component {
   handleClick () {
-    browserHistory.push('/statsy');
+    let x = window.location.pathname;
+
+    if (x !=='/statsy') {
+      browserHistory.push('/statsy');
+    }
   }
   
   render() { 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Parser from 'html-react-parser';
+//import Parser from 'html-react-parser';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, MenuItem, Nav, NavDropdown} from 'react-bootstrap';
 import './styles.css';

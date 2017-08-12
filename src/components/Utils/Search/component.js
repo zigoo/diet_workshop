@@ -26,7 +26,11 @@ class Search extends Component {
  
   handleRoute() {
    // this.setState({visible: !this.state.visible});
-    browserHistory.push('/meal');
+    let x = window.location.pathname;
+
+    if (x !=='/meal') {
+     browserHistory.push('/meal');
+    }
   }
 
   render() {
