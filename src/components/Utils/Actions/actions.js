@@ -1,4 +1,4 @@
-export default function setSelected(typ, selectedId=1) {
+export default function setSelected(typ, selectedId) {
   return {
     type: 'SELECTED',
     typ,
@@ -17,5 +17,13 @@ export function setPath(path) {
   return {
     type:'PATH',
     path
+  };
+}
+
+export function sendEatenMeal(id=1,ateDate) {
+  return {
+    type:'eatenMeal',
+    id,
+    ateDate
   };
 }

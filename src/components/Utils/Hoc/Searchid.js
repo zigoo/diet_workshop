@@ -20,7 +20,7 @@ function SearchForId(ComponentHoc) {
      
     console.log(day);
     return {
-      selectedId: state.meal.meals.find(meal => ((meal.type === state.meal.selectedMeal) && (meal.day === day)) ),
+      mealId: state.meal.meals.find(meal => ((meal.type === state.meal.selectedMeal) && (meal.day === day)) ),
     };
   }
 

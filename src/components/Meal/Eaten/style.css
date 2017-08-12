@@ -13,4 +13,5 @@
 
 .Status {
  grid-area: Status;
+ text-align: center;
 }

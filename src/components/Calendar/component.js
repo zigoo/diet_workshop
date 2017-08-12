@@ -16,7 +16,6 @@ class Calendar extends Component {
       const helper = day.toLocaleDateString();
       const daySentFromCalender = helper !== null ? parseInt(helper.substring(0,2),10) : 1;
  
-      console.log('send')
       sendDateToStore(daySentFromCalender);
     }
     catch (err) {
@@ -44,7 +43,6 @@ class Calendar extends Component {
           <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
             localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
           <p>  
-            {console.log('calendar click')}
             Ilość przepisów: {mealsQuantity}
             }
           </p>

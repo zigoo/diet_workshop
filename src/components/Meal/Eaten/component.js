@@ -2,17 +2,11 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { sendEatenMeal } from '../../Utils/Actions/actions.js';
+import SearchForId from '../../Utils/Hoc/Searchid.js';
 import moment from 'moment';
 
 import './style.css';
-
-function sendEatenMeal(id=1,ateDate) {
-  return {
-    type:'eatenMeal',
-    id,
-    ateDate
-  };
-}
 
 class Eaten extends Component {
   constructor() {
@@ -25,13 +19,11 @@ class Eaten extends Component {
   }
   handleClick() {
     const ateDate = moment().format('DD/MM/YYYY');
-    const {id} = this.props.selectedId;
+    const {id} = this.props.mealId;
     const {dispatch} = this.props;
    
-    console.log(ateDate);
-    
     this.setState({
-      status: 'brawo,zjadles sniadanie '+id
+      status: 'product '+id+' eaten'
     });
     dispatch(sendEatenMeal(id,ateDate));
   }
@@ -56,19 +48,8 @@ class Eaten extends Component {
   }
 }
  
-function mapStateToProps(state) {
-  let day = state.meal.selectedDate;
-  if (day > 10) day = (Math.floor(Math.random()*10)); 
-  
-  return {
-    selectedId: state.meal.meals.find(meal => ((meal.type === state.meal.selectedMeal) && (meal.day === day)) ),
-    selectedDay: state.meal.selectedDate,
-  };
-}
-
-
 Eaten.defaultProps = {
    
 };
-export default connect(mapStateToProps)(Eaten);
+export default SearchForId(Eaten);
  

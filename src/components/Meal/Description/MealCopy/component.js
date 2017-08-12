@@ -5,7 +5,7 @@ import './styles.css';
 
 class MealCopy extends Component {
   render() {
-    const {desc} = this.props.selectedId;
+    const {desc} = this.props.mealId;
     
 
     return (

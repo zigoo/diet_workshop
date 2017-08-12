@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchForId from '../../Hoc/Searchid.js';
 import setSelected , { sendDateToStore }from '../../Actions/actions.js';
 import { connect } from 'react-redux';
 import './style.css';
@@ -11,8 +12,9 @@ class List extends Component {
 
   handleClick(typ,day) {
     const { setSelected, sendDateToStore } = this.props;
+    const {id} = this.props.mealId;
     
-    setSelected(typ); 
+    setSelected(typ,id); 
     sendDateToStore(day);
   }
   render() {
@@ -32,7 +34,4 @@ class List extends Component {
   }
 }
 
-export default connect(null, {
-  sendDateToStore,
-  setSelected
-})(List);
+export default connect(null, {sendDateToStore,setSelected})(SearchForId(List));

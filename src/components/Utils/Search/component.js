@@ -4,7 +4,7 @@ import List from './List/component.js';
 import meals from '../../../helpers/meals.js';
 import Collapsible from '../Collapsible/Collapsible.js';
 import { browserHistory } from 'react-router';
-import { Row, FormGroup, FormControl, Tooltip} from 'react-bootstrap';
+import { Row, FormGroup, FormControl } from 'react-bootstrap';
 import './style.css';
   
 
@@ -59,7 +59,7 @@ class Search extends Component {
                   </FormGroup>
                 </form>  
               </Row>
-              <Row> 
+              <Row className="search-row"> 
                 <List items={this.state.items} />
               </Row>
             </div>
