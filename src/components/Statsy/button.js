@@ -19,7 +19,6 @@ class StatsyBtn extends Component {
   render() { 
     const {visible} = this.props;
     const isHidden = (visible===3 || visible===0) ? '' : ' hidden';
-    console.log('Visible: ',this.props.visible);
     return (
       <div className={"StatsyBtn"+isHidden}>
        <Button 
