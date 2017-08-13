@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
-import MenuTop from './Menu/MenuTop.js';
+import MenuTop from './Menu/container.js';
 import MenuLeft from './Menu/MenuLeft/container.js';
 import MealDescripton from './Meal/Description/container.js';
 import Calendar from './Calendar/container.js';

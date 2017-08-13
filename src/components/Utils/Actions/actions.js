@@ -27,3 +27,11 @@ export function sendEatenMeal(id=1,ateDate) {
     ateDate
   };
 }
+
+export function setCollapse(id,collapsed) {
+  return {
+    type:'isCollapsed',
+    id,
+    collapsed
+  };
+}

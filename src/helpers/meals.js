@@ -1,3 +1,4 @@
+/* eslint-disable */
 //type 1:sniadanie, 2:sniadanie2, 3:obiad, 4:obiad2
 
 const meals = [

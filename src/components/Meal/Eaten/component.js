@@ -1,7 +1,6 @@
  
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import { connect } from 'react-redux';
 import { sendEatenMeal } from '../../Utils/Actions/actions.js';
 import SearchForId from '../../Utils/Hoc/Searchid.js';
 import moment from 'moment';

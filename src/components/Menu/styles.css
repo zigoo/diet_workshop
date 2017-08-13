@@ -3,40 +3,10 @@ body {
   overflow-y: auto;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 img {
-  width: 30px;
-  height: 30px;
-}
-
-.navbar {
-  border: none;
-  ;
-  margin-top: 0px;
-  padding-top: 0px;
-  border-color: black;
-  margin-bottom: 0px;
-  border-radius: 0;
-  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
-}
-
-.navbar-nav {
-  position: relative;
-}
-
-li.dropdown {
-  position: static;
-}
-
-.dropdown-menu {
-  width: 100%;
-}
-
-.dropdown-menu>li {
-  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%
 }
 
 .container {
@@ -44,32 +14,83 @@ li.dropdown {
   width: 100%;
 }
 
-.navbar-header,
-.dropdownc,
-.dropdown-toggle {
-  padding-top: 10px;
-  color: inherit;
+.navbar {
+  border: none;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0;
+  border-color: black;
+  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
 }
 
-#dropdown.dropdown-toggle {
-  padding-bottom: 25px;
+.navbar-nav {
+  float: left;
 }
+
+.navbar-right {
+  float: right;
+}
+
+
+/*
+.dropdown-menu>li {
+  display: inline-block;
+}
+*/
+
+#dropdown {
+  float: left;
+}
+
+#dropdown2 {
+
+  float: right;
+}
+ 
+.dropdown_meal,
+.dropdown_avatar,
+.dropdown-toggle {
+ background-color: inherit;
+}
+
 
 #dropdown,
 #dropdown2 {
+  margin: 0px;
+  margin-right: 5px;
+  background-color: inherit;
+    padding-top: 3px;
+    padding-bottom: 3px;
+     text-align: right;
+}
+
+
+.dropdown_avatar {
+   background-color: inherit;
+    text-align: right;
+}
+.active,
+.open {
   background-color: inherit;
 }
 
-#dropdown2 {
-  margin-right: 20px;
+.navbar-right li a {
+  text-align: right;
 }
 
-.MenuLeft {
-  display: none;
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a, 
+.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus, 
+.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover{
+  background-color: inherit;
 }
 
-#dropdown2 {
-  display: none;
+.navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+  margin:0;
+  text-align: right;
+  width:80%;
+  background-color: white;
 }
 
 @media screen and (min-width: 736px) {

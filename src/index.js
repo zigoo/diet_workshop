@@ -11,6 +11,8 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
  
 import meal from './ridax/meal.js';
 import mealEaten from './ridax/mealEaten.js';
+import collapsed from './ridax/collapsed.js';
+
 import App from './components/App.js';
 import MealDescripton from './components/Meal/Description/container.js';
 import Statsy from './components/Statsy/component.js';
@@ -19,6 +21,7 @@ import Statsy from './components/Statsy/component.js';
 export const reducer = combineReducers({
   meal,
   mealEaten,
+  collapsed,
   routing: routerReducer
 });
  
@@ -32,7 +35,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>
+  
       <Router history={history}>
         <Route path="/" component={App} >
         <IndexRedirect to="/meal" />
@@ -40,7 +43,7 @@ ReactDOM.render(
           <Route path="/statsy" component={Statsy}/>
         </Route>
       </Router>
-    </div>
+ 
   </Provider> 
   , document.getElementById('root'));
        // <IndexRoute component={App}/>

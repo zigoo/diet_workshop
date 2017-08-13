@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DayPicker from 'react-day-picker';
 import LocaleUtils from 'react-day-picker/moment';
-import Collapsible from '../Utils/Collapsible/Collapsible.js';
+import Collapsible from '../Utils/Collapsible/container.js';
 import { browserHistory } from 'react-router';
 
 import 'moment/locale/pl';
@@ -24,9 +24,7 @@ class Calendar extends Component {
   }
 
   handleRoute() {
-    let x = window.location.pathname;
-
-    if (x !=='/meal') {
+    if (window.location.pathname !=='/meal') {
       browserHistory.push('/meal');
     }
   }
@@ -39,12 +37,12 @@ class Calendar extends Component {
       'sierpień','wrzesień','październik','listopad','grudzień'];            
     return(
       <div className="Calendarr" >	
-        <Collapsible title='Kalendarz' onClick={this.handleRoute}>
+        <Collapsible id={2} title='Kalendarz' onClick={this.handleRoute}>
           <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
             localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
           <p>  
             Ilość przepisów: {mealsQuantity}
-            }
+            
           </p>
         </Collapsible>
       </div> 

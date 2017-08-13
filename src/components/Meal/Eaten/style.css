@@ -1,17 +1,17 @@
 .eaten_grid {
- display: grid;
- grid-template-columns: auto;
- grid-template-rows: 1fr 1fr;
- grid-template-areas:
- "Eaten"
- "Status";
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "Eaten" 
+  "Status";
 }
 
 .Eaten {
- grid-area: Eaten; 
+  grid-area: Eaten;
 }
 
 .Status {
- grid-area: Status;
- text-align: center;
+  grid-area: Status;
+  text-align: center;
 }

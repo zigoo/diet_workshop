@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { Glyphicon, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './styles.css';
 
 class MealCopy extends Component {

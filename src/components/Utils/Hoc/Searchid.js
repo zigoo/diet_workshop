@@ -7,7 +7,6 @@ function SearchForId(ComponentHoc) {
       super();
     }
     render() {
-     console.log('SearchForId');
       return <ComponentHoc {...this.props} />;
     }
   }
@@ -18,7 +17,6 @@ function SearchForId(ComponentHoc) {
     if (day > 10) 
       day = 1 + (Math.floor(Math.random()*10));
      
-    console.log(day);
     return {
       mealId: state.meal.meals.find(meal => ((meal.type === state.meal.selectedMeal) && (meal.day === day)) ),
     };

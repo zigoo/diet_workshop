@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js';
-import Collapsible from '../Collapsible/Collapsible.js';
+import Collapsible from '../Collapsible/container.js';
 import { browserHistory } from 'react-router';
 import { Row, FormGroup, FormControl } from 'react-bootstrap';
 import './style.css';
@@ -25,29 +25,17 @@ class Search extends Component {
   }
  
   handleRoute() {
-   // this.setState({visible: !this.state.visible});
-    let x = window.location.pathname;
-
-    if (x !=='/meal') {
+    if (window.location.pathname !=='/meal') {
      browserHistory.push('/meal');
     }
   }
 
   render() {
-   /* const visibleVar = this.state.visible ? '' : 'not';
-    const tooltip = ( 
-      <div className={"visible "+ visibleVar} >
-        <Tooltip placement="left" className="in" id="one">
-             rozwiń i znajdź przepis
-        </Tooltip>
-      </div>
-    );*/
-
     return (
       <div className="Search">
         {/*tooltip */}    
         <div id="click_holder" onClick={this.handleRoute}>
-          <Collapsible title='Szukaj'>       
+          <Collapsible title='Szukaj' id={1}>       
             <div className="Utils_find-box">
               <Row>           
                 <form>
