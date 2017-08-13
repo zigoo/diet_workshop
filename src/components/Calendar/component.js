@@ -3,6 +3,7 @@ import DayPicker from 'react-day-picker';
 import LocaleUtils from 'react-day-picker/moment';
 import Collapsible from '../Utils/Collapsible/container.js';
 import { browserHistory } from 'react-router';
+ 
 
 import 'moment/locale/pl';
 import 'react-day-picker/lib/style.css';
@@ -11,12 +12,14 @@ import './style.css';
 class Calendar extends Component {
 
   handleDayClick(day, { selected={} }) {
-    const { sendDateToStore  } = this.props; 
+    const { sendDateToStore, setCollapse, setVisible} = this.props; 
     try {
       const helper = day.toLocaleDateString();
       const daySentFromCalender = helper !== null ? parseInt(helper.substring(0,2),10) : 1;
  
       sendDateToStore(daySentFromCalender);
+      setCollapse(2, true);
+      setVisible(0);
     }
     catch (err) {
       console.log(err);
@@ -41,15 +44,13 @@ class Calendar extends Component {
           <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
             localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
           <p>  
-            Ilość przepisów: {mealsQuantity}
-            
+            Ilość przepisów: {mealsQuantity}      
           </p>
         </Collapsible>
       </div> 
     );
   }
 }
-
 
 export default Calendar;
 

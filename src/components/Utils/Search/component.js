@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import List from './List/component.js';
 import meals from '../../../helpers/meals.js';
 import Collapsible from '../Collapsible/container.js';
+import GetVisibility from '../../Utils/Hoc/GetVisibility.js';
 import { browserHistory } from 'react-router';
 import { Row, FormGroup, FormControl } from 'react-bootstrap';
 import './style.css';
-  
+
+import {setVisible} from '../Actions/actions.js';
 
 class Search extends Component {
   constructor(){
@@ -28,13 +30,16 @@ class Search extends Component {
     if (window.location.pathname !=='/meal') {
      browserHistory.push('/meal');
     }
+    dispatch(setVisible(1));
   }
 
   render() {
+    const {visible} = this.props;
+    const isHidden = (visible===1 || visible===0) ? '' : ' hidden';
     return (
-      <div className="Search">
+      <div className={"Search"+isHidden}>
         {/*tooltip */}    
-        <div id="click_holder" onClick={this.handleRoute}>
+        <div id="click_holder" onClick={()=> this.handleRoute}>
           <Collapsible title='Szukaj' id={1}>       
             <div className="Utils_find-box">
               <Row>           
@@ -58,4 +63,4 @@ class Search extends Component {
   }
 }
  
-export default Search;
+export default GetVisibility(Search);

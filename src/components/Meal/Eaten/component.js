@@ -1,4 +1,3 @@
- 
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { sendEatenMeal } from '../../Utils/Actions/actions.js';
@@ -30,8 +29,8 @@ class Eaten extends Component {
   render() {
     const ateDate = new Date().toLocaleString();
     return (
-      <div className="eaten_grid">
-       <div className="Eaten">
+      <div className="aaeaten_grid">
+       <div className="aaEaten">
         <Button 
           bsStyle="default" className="desf" 
           bsSize="small" onClick={this.handleClick} >  

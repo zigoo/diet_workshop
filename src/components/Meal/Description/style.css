@@ -31,27 +31,28 @@ p {
 }
 
 
-/* kom */
+//* kom */
 @media screen and (max-width: 736px) {
   .MealDescription-hint {
     margin-top: 2%;
   }
 }
 
-.description_grid {
-  display: grid;
-  height: 400px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80% 20%;
-  grid-template-areas: 
-  "meal-desc"
-  "meal-eaten"
-}
 
-.meal-desc {
-  grid-area: meal-desc;
-}
+  .description_grid {
+    display: grid;
+    height: calc(100vh - 210px);
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 
+    "meal-desc"
+    "meal-eaten";
+  }
 
-.meal-eaten {
-  grid-area: meal-eaten;
-}
+  .meal-desc {
+    grid-area: meal-desc;
+  }
+
+  .meal-eaten {
+    grid-area: meal-eaten;
+  }

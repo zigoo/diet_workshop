@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import {Well, Collapse, Button} from 'react-bootstrap';
-import { setCollapse } from '../Actions/actions.js';
 import './style.css';
  
 
 export class Collapsible extends Component {
   handleClick(e) {
-    const {id, isExpanded, dispatch} = this.props;
+    const {id, isExpanded, setCollapse, setVisible} = this.props;
     e.preventDefault();
     
-    dispatch(setCollapse(id, !isExpanded));
+    setCollapse(id, !isExpanded);
+
+    if (isExpanded) {
+     setVisible(id);
+    } else if (!isExpanded) {
+     setVisible(0);
+    }
 
     if (this.props.onClick)
       this.props.onClick();
   }
 
   render() {
-    const {children, title, isExpanded} = this.props;
+    const {children, title, isExpanded, visible, id} = this.props;
     const bsClass = isExpanded ? '' : " activ";
+    const isHidden = (visible=== id || visible===0) ? '' : ' hidden';
+
     return (
-      <div className="Collapsible">
+      <div className={"Collapsible"+isHidden}>
         <Button 
           bsStyle="default" className={"def" +bsClass} bsSize="large" 
           onClick={(e) => this.handleClick(e)}>

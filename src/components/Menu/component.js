@@ -12,6 +12,7 @@ class MenuTop extends Component {
     this.expandSearch = this.expandSearch.bind(this);
     this.invokeMealType = this.invokeMealType.bind(this);
   }
+  
   invokeMealType(typ) {
     const {selectedId, dispatch} = this.props;
     dispatch(setSelected(typ,selectedId));

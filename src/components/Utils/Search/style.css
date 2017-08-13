@@ -41,17 +41,17 @@ input {
   border-radius: 3px;
 }
 
-#one {
-  margin-left: -80px;
-  margin-top: 5px;
-}
-
 .not {
   visibility: hidden;
 }
 
 .search-row {
   min-height: 0;
+}
+
+
+.hidden {
+  display: none;
 }
 
 ::-webkit-scrollbar {

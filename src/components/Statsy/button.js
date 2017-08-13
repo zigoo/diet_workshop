@@ -2,27 +2,35 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
+import GetVisibility from '../Utils/Hoc/GetVisibility.js';
+ 
+
+import {setVisible} from '../Utils/Actions/actions.js';
 
 class StatsyBtn extends Component {
   handleClick () {
-    let x = window.location.pathname;
+    const { dispatch } = this.props;
 
-    if (x !=='/statsy') {
+    if (window.location.pathname !=='/statsy') {
       browserHistory.push('/statsy');
     }
   }
   
   render() { 
+    const {visible} = this.props;
+    const isHidden = (visible===3 || visible===0) ? '' : ' hidden';
+    console.log('Visible: ',this.props.visible);
     return (
-      <div className="Statsy">
+      <div className={"StatsyBtn"+isHidden}>
        <Button 
          bsStyle="default" className="def" 
-         bsSize="large" onClick={this.handleClick} >  
+         bsSize="large" onClick={()=> this.handleClick()} >  
              Statsy  
        </Button>       
       </div>
     );
   }
 }
- 
-export default StatsyBtn;
+
+export default GetVisibility(StatsyBtn);
+

@@ -35,3 +35,17 @@ export function setCollapse(id,collapsed) {
     collapsed
   };
 }
+
+export function setVisible(id) {
+  return {
+    type:'isVisible',
+    id
+  };
+}
+
+export function removeVisible(id) {
+  return {
+    type:'removeVisible',
+    id
+  };
+}
