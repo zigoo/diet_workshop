@@ -15,6 +15,7 @@ class Search extends Component {
     super();
     this.state = {value: '', meals:meals, items:[], visible: true};
     this.handleChange = this.handleChange.bind(this);
+    this.handleRoute = this.handleRoute.bind(this);
  
   }
   handleChange(e) {
@@ -30,6 +31,9 @@ class Search extends Component {
     if (window.location.pathname !=='/meal') {
      browserHistory.push('/meal');
     }
+  }
+
+  handleVisbility() {
     dispatch(setVisible(1));
   }
 
@@ -37,10 +41,10 @@ class Search extends Component {
     const {visible} = this.props;
     const isHidden = (visible===1 || visible===0) ? '' : ' hidden';
     return (
-      <div className={"Search"+isHidden}>
+      <div className={"Search"+isHidden} >
         {/*tooltip */}    
-        <div id="click_holder" onClick={()=> this.handleRoute}>
-          <Collapsible title='Szukaj' id={1}>       
+        <div id="click_holder" onClick={()=> this.handleVisbility}>
+          <Collapsible title='Szukaj' id={1} onClick={this.handleRoute}>       
             <div className="Utils_find-box">
               <Row>           
                 <form>

@@ -3,14 +3,10 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
 import GetVisibility from '../Utils/Hoc/GetVisibility.js';
- 
 
-import {setVisible} from '../Utils/Actions/actions.js';
 
 class StatsyBtn extends Component {
   handleClick () {
-    const { dispatch } = this.props;
-
     if (window.location.pathname !=='/statsy') {
       browserHistory.push('/statsy');
     }
