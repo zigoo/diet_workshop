@@ -17,6 +17,7 @@ import App from './components/App.js';
 import MealDescripton from './components/Meal/Description/container.js';
 import Statsy from './components/Statsy/component.js';
 
+import registerServiceWorker from './registerServiceWorker';
 
 export const reducer = combineReducers({
   meal,
@@ -47,3 +48,4 @@ ReactDOM.render(
   </Provider> 
   , document.getElementById('root'));
        // <IndexRoute component={App}/>
+registerServiceWorker();
