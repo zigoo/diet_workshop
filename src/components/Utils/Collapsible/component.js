@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Collapse} from 'react-collapse';
+import {Well} from 'react-bootstrap';
 import './style.css';
 
 
@@ -32,12 +33,13 @@ export class Collapsible extends Component {
           onClick={(e) => this.handleClick(e)} >
              {title} 
         </button>  
-        <div className={this.props.clName}>
-          <Collapse 
-            isOpened={ !isExpanded} >
-           <div>  
-            {children}
-           </div>
+        <div >
+          <Collapse isOpened={!isExpanded} >
+            <Well className="well well-custom">
+              <div className={this.props.clName}>
+                 {children}
+              </div>
+            </Well>
           </Collapse>
         </div>
       </div>

@@ -39,5 +39,8 @@
 } 
 
 .Collapsible {
-  text-align: center;
+  font-size: 16px;
+}
+.DayPicker__week-headers {
+  font-size: 14px;
 }

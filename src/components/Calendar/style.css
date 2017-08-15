@@ -1,22 +1,32 @@
 table {
     display: table;
     border-collapse: separate;
-    border-spacing: 2px;
+    border-spacing: 1px;
     border-color: grey;
+    
+    align-items: center;
 }
 
 .Calendarr {
     font-family: "Lucida Grande", sans-serif;
-    font-size: 16px;
+    font-size: 10px;
     cursor: pointer;
     text-align: center;
+
 }
 
 .Calendar-margin {
-    margin-left: 45px;
 }
+   // margin-left: 45px;
 
 .form-group {
     padding-left: 15px;
     margin-bottom: 15px;
+}
+
+
+.DayPicker ,
+.DayPicker--horizontal {
+ margin-left: auto;
+ margin-right: auto;
 }
