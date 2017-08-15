@@ -1,15 +1,17 @@
 /* eslint-disable */
 import meals from '../helpers/meals.js';
+import moment from 'moment';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 const SELECTED = 'SELECTED';
 const SELECTED_DATE = 'SELECTED_DATE';
 
+const selectedDateInit = moment(new Date()).format('YYYY-MM-DD');
 const initialState = {
   meals,
+  selectedId: 1 ,
   selectedMeal: 1,
-  selectedDate: 1,
-  selectedId: 1 
+  selectedDate: selectedDateInit,
 };
 
 
@@ -24,7 +26,7 @@ export default function meal (state = initialState , action ) {
     case SELECTED_DATE:
       return {
         ...state,
-        selectedDate: action.day
+        selectedDate: action.date
       }
     case LOCATION_CHANGE:
       const pathname = action.payload.pathname;

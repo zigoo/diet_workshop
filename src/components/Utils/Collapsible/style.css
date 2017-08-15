@@ -12,15 +12,32 @@
 
 .def {
   width: 100%;
+  margin: 0;
   display: block;
   color: white;
   outline: none;
   border: none;
-  margin: 0;
-  padding-left: 0px;
+  padding: 0px;
   border-radius: 0;
+  height:32px;
+  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.def:active,
+.def:hover {
+  outline: none;
+  background-image: linear-gradient(to right, gray 0%, #fcfff4 100%);
+}
+
+.activ,
+.activ.def:hover {
+  background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
+} 
+
+.Collapsible {
+  text-align: center;
 }

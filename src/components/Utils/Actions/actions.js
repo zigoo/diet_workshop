@@ -6,10 +6,10 @@ export default function setSelected(typ, selectedId) {
   };
 }
 
-export function sendDateToStore(day = 1) {
+export function sendDateToStore(date = new Date()) {
   return {
     type: 'SELECTED_DATE',
-    day
+    date
   };
 }
 

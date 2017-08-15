@@ -14,6 +14,7 @@ class Search extends Component {
   constructor(){
     super();
     this.state = {value: '', meals:meals, items:[], visible: true};
+
     this.handleChange = this.handleChange.bind(this);
     this.handleRoute = this.handleRoute.bind(this);
  
@@ -43,7 +44,7 @@ class Search extends Component {
     return (
       <div className={"Search"+isHidden} >
         {/*tooltip */}    
-        <div id="click_holder" onClick={()=> this.handleVisbility}>
+        <div id="click_holder">
           <Collapsible title='Szukaj' id={1} onClick={this.handleRoute}>       
             <div className="Utils_find-box">
               <Row>           

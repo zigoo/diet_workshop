@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchForId from '../../Hoc/Searchid.js';
 import setSelected , { sendDateToStore }from '../../Actions/actions.js';
 import { connect } from 'react-redux';
+
 import './style.css';
 
 class List extends Component {
@@ -11,11 +12,12 @@ class List extends Component {
   }
 
   handleClick(typ,day) {
-    const { setSelected, sendDateToStore } = this.props;
+    const { selectedDate, setSelected, sendDateToStore } = this.props;
     const {id} = this.props.mealId;
+    let date = selectedDate.substring(0,8)+day;
     
     setSelected(typ,id); 
-    sendDateToStore(day);
+    sendDateToStore(date);
   }
   render() {
     const {items} = this.props;

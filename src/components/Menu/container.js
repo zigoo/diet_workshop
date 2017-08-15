@@ -1,15 +1,12 @@
 import MenuTop from './component.js';
 import { connect } from 'react-redux';
+import SearchForId from '../Utils/Hoc/Searchid.js';
+import setSelected, { setVisible, setCollapse } from '../Utils/Actions/actions.js';
 
-function mapStateToProps(state) {
-  let day = state.meal.selectedDate;
-  if (day > 10) 
-    day = 1 + (Math.floor(Math.random()*10));
-
+function mapStateToProps(state,props) {
   return { 
-    isExpanded: state.collapsed,
-    selectedId: state.meal.meals.find(meal => ((meal.type === state.meal.selectedMeal) && (meal.day === day)) ),
+    isExpanded: state.collapsed
   };
 }
 
-export default connect(mapStateToProps)(MenuTop);
+export default connect(mapStateToProps,{setVisible,setCollapse,setSelected})(SearchForId(MenuTop));

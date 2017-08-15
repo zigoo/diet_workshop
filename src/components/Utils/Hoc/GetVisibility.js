@@ -12,11 +12,11 @@ function getVisibility(ComponentHoc) {
   }
 
 
- function mapStateToProps(state) {
-  return { 
-    visible: state.collapsed.visible,
-   };
-}
+  function mapStateToProps(state) {
+    return { 
+      visible: state.collapsed.visible,
+    };
+  }
 
   return connect(mapStateToProps)(CommonComponent);
 }

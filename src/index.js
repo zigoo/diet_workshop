@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
  
-import { Provider }	 from 'react-redux';
+import { Provider }  from 'react-redux';
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { Router, Route, browserHistory, IndexRoute, IndexRedirect } from 'react-router';
 
@@ -17,7 +17,6 @@ import App from './components/App.js';
 import MealDescripton from './components/Meal/Description/container.js';
 import Statsy from './components/Statsy/component.js';
 
-import registerServiceWorker from './registerServiceWorker';
 
 export const reducer = combineReducers({
   meal,
@@ -36,7 +35,6 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-  
       <Router history={history}>
         <Route path="/" component={App} >
         <IndexRedirect to="/meal" />
@@ -44,8 +42,5 @@ ReactDOM.render(
           <Route path="/statsy" component={Statsy}/>
         </Route>
       </Router>
- 
   </Provider> 
   , document.getElementById('root'));
-       // <IndexRoute component={App}/>
-registerServiceWorker();

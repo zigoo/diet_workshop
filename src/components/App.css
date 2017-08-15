@@ -91,3 +91,27 @@ html {
     margin: 0 auto;
   }
 }
+
+
+.def {
+  width: 100%;
+  display: block;
+  color: white;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding-right: 0;
+  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
+}
+
+.def:active,
+.def:hover {
+  outline: none;
+  background-image: linear-gradient(to right, gray 0%, #fcfff4 100%);
+}
+
+.activ,
+.activ.def:hover {
+  background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
+} 

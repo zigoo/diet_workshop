@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Eaten from '../Eaten/component.js';
+//import Eaten from '../Eaten/component.js';
 import './style.css';
 
 class MealDescription extends Component {
   render() {
-    const mealType = ['sniadanie', 'pozne sniadanie', 'obiad', 'kolacja'];
+   const mealType = ['sniadanie', 'drugie sniadanie', 'obiad', 'kolacja'];
     const {desc, name, hint, type } = this.props.mealId;
    
     return (
@@ -25,7 +25,7 @@ class MealDescription extends Component {
           </div>
         </div>
         <div className="meal-eaten">
-          <Eaten />
+         {/* <Eaten /> */}
         </div>
       </div>
     </div>

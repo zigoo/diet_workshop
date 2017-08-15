@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
-import DayPicker from 'react-day-picker';
-import LocaleUtils from 'react-day-picker/moment';
+ 
 import Collapsible from '../Utils/Collapsible/container.js';
 import { browserHistory } from 'react-router';
  
+import { DayPickerSingleDateController } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
 
-import 'moment/locale/pl';
-import 'react-day-picker/lib/style.css';
+import moment from 'moment';
 import './style.css';
 
 class Calendar extends Component {
+  constructor(props){
+    super(props);
 
-  handleDayClick(day, { selected={} }) {
-    const { sendDateToStore, setCollapse, setVisible} = this.props; 
-    try {
-      const helper = day.toLocaleDateString();
-      const daySentFromCalender = helper !== null ? parseInt(helper.substring(0,2),10) : 1;
- 
-      sendDateToStore(daySentFromCalender);
-      setCollapse(2, true);
-      setVisible(0);
-    }
-    catch (err) {
-      console.log(err);
-    } 
+    this.onDateChange = this.onDateChange.bind(this);
+    this.onFocusChange = this.onFocusChange.bind(this);
   }
 
   handleRoute() {
@@ -32,25 +23,34 @@ class Calendar extends Component {
     }
   }
 
+  onDateChange(date) {
+    const {sendDateToStore} = this.props; 
+    let dateHlpr = moment(date).format('YYYY-MM-DD');
+
+    sendDateToStore(dateHlpr);
+  }
+
+
+  onFocusChange() {
+   //just for defaultprops requirements sake
+  }
+
   render() {
     const { selectedDay } = this.props;
-    const mealsQuantity = this.props.meals.length;
+    let date = moment(new Date(selectedDay) );
 
-    const months = ['styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec',
-      'sierpień','wrzesień','październik','listopad','grudzień'];            
     return(
-      <div className="Calendarr" >	
-        <Collapsible id={2} title='Kalendarz' onClick={this.handleRoute}>
-          <DayPicker {...{firstDayOfWeek: 1, months, modifiers: { disabled: {daysOfWeek: [0,6]} }, onDayClick: this.handleDayClick.bind(this),
-            localeUtils: LocaleUtils, locale: "pl", selectedDay, todayButton: "dzisiaj" }} />
-          <p>  
-            Ilość przepisów: {mealsQuantity}      
-          </p>
-        </Collapsible>
+      <div className="Calendarr">	
+        <Collapsible id={2} title='Kalendarz' onClick={this.handleRoute} clName="Calendar-margin" >  
+          <DayPickerSingleDateController
+            onDateChange={this.onDateChange}
+            onFocusChange={this.onFocusChange}
+            focused={true}
+            date={date} />
+        </Collapsible>  
       </div> 
     );
   }
 }
 
 export default Calendar;
-

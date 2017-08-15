@@ -2,17 +2,7 @@
   margin-left: 0px;
 }
 
-.def {
-  width: 100%;
-  display: block;
-  color: white;
-  border-radius: 0;
-  outline: none;
-  border: none;
-  margin: 0;
-  padding-right: 0;
-  background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
-}
+
 
 .rev-def {
  background-image: linear-gradient(to right, #000000 0%, #45484d 100%);

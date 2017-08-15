@@ -12,6 +12,10 @@ table {
     text-align: center;
 }
 
+.Calendar-margin {
+    margin-left: 45px;
+}
+
 .form-group {
     padding-left: 15px;
     margin-bottom: 15px;
