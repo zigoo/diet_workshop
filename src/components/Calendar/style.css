@@ -1,32 +1,32 @@
 table {
-    display: table;
-    border-collapse: separate;
-    border-spacing: 1px;
-    border-color: grey;
-    
-    align-items: center;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 1px;
+  border-color: grey;
+
+  align-items: center;
 }
 
 .Calendarr {
-    font-family: "Lucida Grande", sans-serif;
-    font-size: 10px;
-    cursor: pointer;
-    text-align: center;
-
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .Calendar-margin {
+  zoom: 0.7;
 }
-   // margin-left: 45px;
+
 
 .form-group {
-    padding-left: 15px;
-    margin-bottom: 15px;
+  padding-left: 15px;
+  margin-bottom: 15px;
 }
 
 
-.DayPicker ,
+.DayPicker,
 .DayPicker--horizontal {
- margin-left: auto;
- margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }

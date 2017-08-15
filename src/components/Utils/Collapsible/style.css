@@ -23,10 +23,6 @@
   background-image: linear-gradient(to right, #45484d 0%, #000000 100%);
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .def:active,
 .def:hover {
   outline: none;
@@ -41,6 +37,7 @@
 .Collapsible {
   font-size: 16px;
 }
-.DayPicker__week-headers {
-  font-size: 14px;
+
+.hidden {
+  visibility: hidden;
 }
