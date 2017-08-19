@@ -26,3 +26,4 @@ export default function collapsed (state = initialState , action ) {
       return state;
     }
 }
+
