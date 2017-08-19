@@ -5,7 +5,8 @@ import setSelected, { setVisible, setCollapse } from '../Utils/Actions/actions.j
 
 function mapStateToProps(state,props) {
   return { 
-    isExpanded: state.collapsed
+    isExpanded: state.collapsed,
+    authenticated: state.auth.authenticated
   };
 }
 

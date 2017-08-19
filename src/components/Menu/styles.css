@@ -105,3 +105,19 @@ img {
     display: block;
   }
 }
+
+.menu_links {
+  padding:15px;
+  margin-top:15px;
+  display:inline;
+}
+
+li, ul {
+  display: inline;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.pullright {
+  float:right;
+}

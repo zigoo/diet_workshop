@@ -5,19 +5,25 @@
   font-size: 9px;
 }
 
-ul {
+.List li {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.List ul {
   list-style-type: none;
 }
 
-li:nth-of-type(1n+15) {
+.List li:nth-of-type(1n+15) {
   display: none;
 }
 
-li:nth-child(odd) {
+.List li:nth-child(odd) {
   color: #2d9287;
 }
 
-li:hover {
+.List li:hover {
   color: darkgray;
   cursor: pointer;
 }

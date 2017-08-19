@@ -1,10 +1,30 @@
 .MealDescription {
   margin-top: 2%;
   text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .MealDescription-title {
   text-align: center;
+}
+
+.description_grid {
+  display: grid;
+  height: calc(100vh - 210px);
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% 20%;
+  grid-template-areas: 
+  "meal-desc" 
+  "meal-eaten";
+}
+
+.meal-desc {
+  grid-area: meal-desc;
+}
+
+.meal-eaten {
+  grid-area: meal-eaten;
 }
 
 h3 {
@@ -30,29 +50,8 @@ p {
   }
 }
 
-
-//* kom */
 @media screen and (max-width: 736px) {
   .MealDescription-hint {
     margin-top: 2%;
   }
 }
-
-
-  .description_grid {
-    display: grid;
-    height: calc(100vh - 210px);
-    grid-template-columns: 1fr;
-    grid-template-rows: 80% 20%;
-    grid-template-areas: 
-    "meal-desc"
-    "meal-eaten";
-  }
-
-  .meal-desc {
-    grid-area: meal-desc;
-  }
-
-  .meal-eaten {
-    grid-area: meal-eaten;
-  }

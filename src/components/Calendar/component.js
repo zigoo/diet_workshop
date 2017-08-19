@@ -26,13 +26,12 @@ class Calendar extends Component {
   onDateChange(date) {
     const {sendDateToStore} = this.props; 
     let dateHlpr = moment(date).format('YYYY-MM-DD');
-
     sendDateToStore(dateHlpr);
   }
 
 
   onFocusChange() {
-   //just for defaultprops requirements sake
+    //just for defaultprops requirements sake
   }
 
   render() {

@@ -1,46 +1,47 @@
-/* eslint-disable */
+/* zzeslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
  
+import reduxThunk from 'redux-thunk';
 import { Provider }  from 'react-redux';
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
-import { Router, Route, browserHistory, IndexRoute, IndexRedirect } from 'react-router';
-
+import { createStore, applyMiddleware } from 'redux';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
- 
-import meal from './ridax/meal.js';
-import mealEaten from './ridax/mealEaten.js';
-import collapsed from './ridax/collapsed.js';
 
 import App from './components/App.js';
+import Signin from './components/Auth/signin.js';
+import Signup from './components/Auth/signup.js';
+import Signout from './components/Auth/signout.js';
+import RequireAuth from './components/Auth/require_auth.js';
+import Welcome from './components/Welcome/Welcome.js';
 import MealDescripton from './components/Meal/Description/container.js';
 import Statsy from './components/Statsy/component.js';
 
+import { AUTH_USER } from './components/Auth/types.js';
+import rootReducer from './ridax/reducers.js';
 
-export const reducer = combineReducers({
-  meal,
-  mealEaten,
-  collapsed,
-  routing: routerReducer
-});
- 
-export const store = createStore(
-  reducer,
-  composeWithDevTools() 
-);
 
- 
-const history = syncHistoryWithStore(browserHistory, store);
+const storeWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = storeWithMiddleware(rootReducer,composeWithDevTools() );
+const token = localStorage.getItem('token');
+
+if (token) {
+  store.dispatch({ type: AUTH_USER });
+}
 
 ReactDOM.render(
   <Provider store={store}>
-      <Router history={history}>
-        <Route path="/" component={App} >
-        <IndexRedirect to="/meal" />
-          <Route path="/meal" component={MealDescripton}/>
-          <Route path="/statsy" component={Statsy}/>
-        </Route>
-      </Router>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Welcome} /> 
+        <Route path="signin" component={Signin}/>
+        <Route path="signout" component={Signout}/>
+        <Route path="signup" component={Signup}/>
+        <Route path="meal" component={RequireAuth(MealDescripton)}/>
+        <Route path="statsy" component={RequireAuth(Statsy)}/>
+      </Route>
+    </Router>
   </Provider> 
   , document.getElementById('root'));
+
+//IndexRedirect

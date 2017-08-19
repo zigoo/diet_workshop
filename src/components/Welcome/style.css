@@ -1,0 +1,16 @@
+.welcome {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.welcome h3 {
+  margin-top: 10%;
+}
+
+.welcome img {
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}

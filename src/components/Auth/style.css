@@ -1,0 +1,82 @@
+.signin {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 40%;
+}
+
+.signin .form-control {
+  margin-bottom: 10px;
+}
+
+.signin label {
+  font-weight: normal;
+  color: #ff3d2e;
+}
+
+.signup {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 35%;
+}
+
+.signup .form-control {
+  margin-bottom: 5px;
+}
+
+.signup label {
+  font-weight: normal;
+  color: black;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.signout {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.signout h3 {
+  margin-top: 10%;
+}
+
+.signout img {
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.sgn_btn:active,
+.sgn_btn:hover,
+.sgn_btn:focus {
+  color: white;
+}
+
+.sgn_btn {
+  width: 100%;
+  margin: 0;
+  display: block;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0px;
+  border-radius: 15px;
+  height:32px;
+  background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
+}
+
+.sgn_btn:active,
+.sgn_btn:hover {
+  outline: none;
+  background-image: linear-gradient(to right, gray 0%, #fcfff4 100%);
+}
+
+.activ,
+.activ.sgn_btn:hover {
+  background-image: linear-gradient(45deg, #ff3d2e, #ff252c);
+} 

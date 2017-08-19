@@ -1,5 +1,5 @@
 /* eslint-disable */
-import meals from '../helpers/meals.js';
+import meals from '../../helpers/meals.js';
 import moment from 'moment';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
@@ -28,7 +28,7 @@ export default function meal (state = initialState , action ) {
         ...state,
         selectedDate: action.date
       }
-    case LOCATION_CHANGE:
+   case LOCATION_CHANGE:
       const pathname = action.payload.pathname;
       const [_, operation = ""] = pathname.split('/');
       console.log('path:',operation)

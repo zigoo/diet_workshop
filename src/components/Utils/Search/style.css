@@ -1,7 +1,4 @@
-input {
-  text-align: center;
-}
-
+ 
 .Utils_find-box {
   color: #f44277;
 }
@@ -33,7 +30,7 @@ input {
 }
 
 .input-sm {
-
+  text-align: center;
   width: 100%;
 
   padding: 0;
