@@ -33,12 +33,6 @@ img {
 }
 
 
-/*
-.dropdown-menu>li {
-  display: inline-block;
-}
-*/
-
 #dropdown {
   float: left;
 }
@@ -47,11 +41,11 @@ img {
 
   float: right;
 }
- 
+
 .dropdown_meal,
 .dropdown_avatar,
 .dropdown-toggle {
- background-color: inherit;
+  background-color: inherit;
 }
 
 
@@ -60,16 +54,17 @@ img {
   margin: 0px;
   margin-right: 5px;
   background-color: inherit;
-    padding-top: 3px;
-    padding-bottom: 3px;
-     text-align: right;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: right;
 }
 
 
 .dropdown_avatar {
-   background-color: inherit;
-    text-align: right;
+  background-color: inherit;
+  text-align: right;
 }
+
 .active,
 .open {
   background-color: inherit;
@@ -80,16 +75,16 @@ img {
 }
 
 
-.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a, 
-.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus, 
-.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover{
+.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a,
+.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus,
+.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover {
   background-color: inherit;
 }
 
 .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-  margin:0;
+  margin: 0;
   text-align: right;
-  width:80%;
+  width: 80%;
   background-color: white;
 }
 
@@ -107,17 +102,18 @@ img {
 }
 
 .menu_links {
-  padding:15px;
-  margin-top:15px;
-  display:inline;
+  padding: 15px;
+  margin-top: 15px;
+  display: inline;
 }
 
-li, ul {
+li,
+ul {
   display: inline;
   text-decoration: none;
   list-style-type: none;
 }
 
 .pullright {
-  float:right;
+  float: right;
 }
