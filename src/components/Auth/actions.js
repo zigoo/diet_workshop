@@ -16,7 +16,7 @@ export function signinUser({ email, password }){
         browserHistory.push('/meal');
       })
       .catch(() => {
-        dispatch(authError('Bad login or password'));
+        dispatch(authError('Zły login lub hasło'));
       });
   };
 }
